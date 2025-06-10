@@ -1,0 +1,34 @@
+.alert-enter-active,
+.alert-leave-active {
+  transition-property: transform, opacity;
+  transition-duration: calc(var(--transition-duration) * 2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.alert-enter-from,
+.alert-leave-to {
+  opacity: 0;
+}
+.alert-enter-to,
+.alert-leave-from {
+  opacity: 1;
+}
+
+.alert-list-enter-active,
+.alert-list-leave-active {
+  transition-property: transform, opacity;
+  transition-duration: calc(var(--transition-duration) * 2);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.alert-list-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.alert-list-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.alert-list-enter-to,
+.alert-list-leave-from {
+  opacity: 1;
+  transform: translateY(0px);
+}
