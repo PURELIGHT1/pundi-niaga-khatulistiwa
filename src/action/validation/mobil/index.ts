@@ -1,9 +1,0 @@
-export { biayaPajakValidation } from "./biaya-pajak-validation";
-export { hargaValidation } from "./harga-validation";
-export { jatuhTempoPajakValidation } from "./jatuh-tempo-pajak-validation";
-export { jenisBBMValidation } from "./jenis-bbm-validation";
-export { jenisValidation } from "./jenis-validation";
-export { merekValidation } from "./merek-validation";
-export { namaValidation } from "./nama-validation";
-export { nomorPolisiValidation } from "./nomor-polisi-validation";
-export { warnaValidation } from "./warna-validation";

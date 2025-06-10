@@ -1,6 +1,0 @@
-export { merekValidation } from "./merek-validation.ts";
-export { jenisValidation } from "./jenis-validation.ts";
-export { namaValidation } from "./nama-validation.ts";
-export { hargaValidation } from "./harga-validation.ts";
-export { stokValidation } from "./stok-validation.ts";
-export { statusValidation } from "./status-validation.ts";
