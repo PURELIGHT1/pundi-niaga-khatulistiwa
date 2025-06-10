@@ -12,7 +12,7 @@
 
       <!-- Topbar -->
       <!-- Topbar -->
-      <VAppBar app flat color="primary">
+      <VAppBar app flat color="secondary">
         <VAppBarTitle>Dashboard</VAppBarTitle>
         <VSpacer />
         <template v-for="item in topbarItems" :key="item.key">
