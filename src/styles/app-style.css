@@ -1,4 +1,4 @@
-@import url("./transition-style.css");
+@import url('./transition-style.css');
 
 :root {
   --transition-duration: 1120ms;
@@ -21,7 +21,7 @@ div[data-v-app] > div.v-application {
   top: 0;
   left: 0;
   transition-duration: calc(var(--transition-duration) * 3 / 2) !important;
-  background: url("../assets/background.webp");
+  background: url('../assets/background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;

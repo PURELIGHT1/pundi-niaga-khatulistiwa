@@ -1,47 +1,37 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <VLayout min-height="100vh" height="100%">
+    <RouterView class="ma-auto" />
+  </VLayout>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <VOverlay class="d-flex align-center justify-center" :model-value="appStore.loading" persistent :z-index="100000">
+    <VProgressCircular indeterminate :size="64" :width="8" color="secondary" />
+  </VOverlay>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <Transition name="alert">
+    <VCard v-if="appStore.alerts.length > 0" class="pa-2 overflow-auto" style="z-index: 90000" color="transparent"
+      position="fixed" width="410px" min-height="fit-content" max-height="100%" location="top end">
+      <TransitionGroup name="alert-list">
+        <template v-for="alert in appStore.alerts" :key="alert.id">
+          <VCard variant="flat" color="surface">
+            <VAlert class="text-pre-wrap" :type="alert.type" :title="alert.title" :text="alert.message" variant="tonal"
+              border="start" />
+          </VCard>
+
+          <VDivider class="mt-2" />
+        </template>
+      </TransitionGroup>
+    </VCard>
+  </Transition>
+
+  <VDialog :model-value="appStore.dialog.show" persistent>
+    <VCard class="ma-auto pa-8 d-flex flex-column" width="512px" color="primary" elevation="4">
+      <component :is="appStore.dialog.component" v-bind="appStore.dialog.props" />
+    </VCard>
+  </VDialog>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup lang="ts">
+  import { useAppStore } from './stores/app-store'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+  const appStore = useAppStore()
+</script>
