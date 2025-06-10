@@ -95,13 +95,18 @@
   const userStore = useUserStore()
   const notifikasiStore = useNotifikasiStore()
 
-  const allTopbarItems = getTopbar(userStore.user.id, userStore)
+  const topbarItems = computed<TopBar[]>(() => {
+    const user = userStore.user
+    if (!user) return []
 
-  const topbarItems = computed<TopBar[]>(() =>
-    allTopbarItems.filter((item) => item.role.includes(userStore.user.jenis)),
-  )
+    return getTopbar(user.id, userStore).filter((item) =>
+      item.role.includes(user.jenis)
+    )
+  })
 
-  const unreadCountNotif = notifikasiStore.countUnreadNotifikasi(appStore.user.id).count
+  const unreadCountNotif = computed(() =>
+    notifikasiStore.countUnreadNotifikasi(appStore.user.id).count
+  );
 
   function handleNotifikasiClick(notif: Notifikasi) {
     if (!notif.status_baca) {
