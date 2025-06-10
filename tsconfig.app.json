@@ -4,9 +4,23 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ESNext",
-    "module": "ESNext",
+    
+    "strict": false,
+    "importHelpers": true,
     "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noErrorTruncation": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    
     "types": ["vite/client"],
 
     "paths": {

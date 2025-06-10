@@ -1,6 +1,6 @@
 import { useAppStore } from '@/stores/app-store'
 import { namaValidation, statusValidation } from '../pks'
-import { PKSForm } from '@/models/pks-model'
+import type { PKSForm } from '@/models/pks-model'
 
 export async function checkPKSValidation(action: string, form: PKSForm): Promise<boolean> {
   const appStore = useAppStore()

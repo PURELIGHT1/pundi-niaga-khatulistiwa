@@ -13,8 +13,10 @@ export async function warnaValidation(
   if (!value) {
     error = 'Warna Tidak Boleh Kosong!'
   } else {
-    const found = MobilWarna.find((w) => w.value === value)
-    found === null ? (error = 'Warna Tidak Valid!') : null
+    const found = MobilWarna.find((w) => w.value === value) ?? null
+    if(found === null){
+      error = 'Warna Tidak Valid!'
+    }
   }
 
   await nextTick(() => {

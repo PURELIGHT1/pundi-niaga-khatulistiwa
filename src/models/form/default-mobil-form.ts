@@ -1,4 +1,4 @@
-import { MobilForm } from '../mobil-model'
+import type { MobilForm } from '../mobil-model'
 
 export const defaultMobilForm: MobilForm = {
   merek: {

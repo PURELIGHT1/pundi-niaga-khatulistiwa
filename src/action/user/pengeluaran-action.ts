@@ -1,8 +1,8 @@
-import { ActionModel } from '@/models/action-model'
+import type { ActionModel } from '@/models/action-model'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
-import { Mobil } from '@/models/mobil-model'
-import {
+import type { Mobil } from '@/models/mobil-model'
+import type {
   FormattedPengeluaran,
   Pengeluaran,
   PengeluaranForm,

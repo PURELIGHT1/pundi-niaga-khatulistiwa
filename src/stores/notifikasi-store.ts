@@ -3,7 +3,7 @@
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { defaultNotifikasiForm } from '@/models/form'
-import { FormattedNotifikasi, Notifikasi } from '@/models/notifikasi-model'
+import type { FormattedNotifikasi, Notifikasi } from '@/models/notifikasi-model'
 import { notifikasiActions } from '@/action/user/notifikasi-action'
 
 export const useNotifikasiStore = defineStore('notifikasi-store', {

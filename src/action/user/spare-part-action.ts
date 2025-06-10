@@ -1,11 +1,11 @@
-import { ActionModel } from '@/models/action-model'
+import type { ActionModel } from '@/models/action-model'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
 import {
-  FormattedSparePart,
-  SparePart,
-  SparePartForm,
   StatusSparePart,
+  type FormattedSparePart,
+  type SparePart,
+  type SparePartForm,
 } from '@/models/spare-part-model'
 import { checkSparePartValidation } from '../validation/check-validation'
 import { UserJenis } from '@/models/user-model'

@@ -1,4 +1,4 @@
-import { UserForm } from '../user-model'
+import type { UserForm } from '../user-model'
 
 export const defaultUserForm: UserForm = {
   nama_lengkap: {

@@ -1,4 +1,4 @@
-import { DialogAction } from '@/models/app-model'
+import type { DialogAction } from '@/models/app-model'
 
 export interface ActionModel {
   isValidationValid: boolean

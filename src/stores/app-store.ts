@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Alert, Dialog, DialogAction } from '@/models/app-model'
+import type { Alert, Dialog, DialogAction } from '@/models/app-model'
 import router from '@/plugins/router'
 import { defineStore } from 'pinia'
 import { shallowRef, nextTick } from 'vue'
@@ -8,9 +8,9 @@ import { useSopirStore } from './sopir-store'
 import { usePendapatanStore } from './pendapatan-store'
 import { useMobilStore } from './mobil-store'
 import { useUserStore } from './user-store'
-import { User, UserJenis } from '@/models/user-model'
+import { UserJenis, type User } from '@/models/user-model'
 import { useNotifikasiStore } from './notifikasi-store'
-import { Mobil } from '@/models/mobil-model'
+import type { Mobil } from '@/models/mobil-model'
 
 export const useAppStore = defineStore('app-store', {
   state: () => ({

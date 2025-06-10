@@ -1,4 +1,4 @@
-import { FormattedSopir, Sopir } from '@/models/sopir-model'
+import type { FormattedSopir, Sopir } from '@/models/sopir-model'
 import i18n from '@/plugins/i18n'
 
 export function getFormattedSopirs(sopirs: Sopir[]): FormattedSopir[] {

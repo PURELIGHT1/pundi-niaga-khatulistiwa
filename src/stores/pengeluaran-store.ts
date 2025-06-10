@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Pengeluaran, FormattedPengeluaran, PengeluaranType } from '@/models/pengeluaran-model'
+import type { Pengeluaran, FormattedPengeluaran, PengeluaranType } from '@/models/pengeluaran-model'
 import { useLocalStorage } from '@vueuse/core'
 import { parse } from 'date-fns'
 import { defineStore } from 'pinia'

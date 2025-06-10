@@ -1,7 +1,7 @@
-import { ActionModel } from '@/models/action-model'
+import type { ActionModel } from '@/models/action-model'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
-import { FormattedPKS, PKS, PKSForm } from '@/models/pks-model'
+import type { FormattedPKS, PKS, PKSForm } from '@/models/pks-model'
 import { checkPKSValidation } from '../validation/check-validation'
 
 export function pksActions() {

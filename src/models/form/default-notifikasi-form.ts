@@ -1,4 +1,4 @@
-import { NotifikasiForm } from '../notifikasi-model'
+import type { NotifikasiForm } from '../notifikasi-model'
 
 export const defaultNotifikasiForm: NotifikasiForm = {
   pesan: {

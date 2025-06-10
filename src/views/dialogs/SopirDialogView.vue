@@ -96,8 +96,8 @@
 <script setup lang="ts">
   import CustomGridLayout from '@/components/CustomGridLayout.vue'
   import CustomTextField from '@/components/CustomTextField.vue'
-  import { DialogAction } from '@/models/app-model'
-  import { FormattedSopir } from '@/models/sopir-model'
+  import type { DialogAction } from '@/models/app-model'
+  import type { FormattedSopir } from '@/models/sopir-model'
   import { useAppStore } from '@/stores/app-store'
   import { useSopirStore } from '@/stores/sopir-store'
   import {

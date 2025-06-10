@@ -1,4 +1,4 @@
-import { PKSForm } from '../pks-model'
+import type { PKSForm } from '../pks-model'
 
 export const defaultPKSForm: PKSForm = {
   nama: {

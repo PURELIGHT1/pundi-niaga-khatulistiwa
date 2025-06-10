@@ -99,8 +99,8 @@
 <script setup lang="ts">
   import CustomGridLayout from '@/components/CustomGridLayout.vue'
   import CustomTextArea from '@/components/CustomTextArea.vue'
-  import { DialogAction } from '@/models/app-model'
-  import { FormattedPengeluaran, PengeluaranType } from '@/models/pengeluaran-model'
+  import type { DialogAction } from '@/models/app-model'
+  import { type FormattedPengeluaran, PengeluaranType } from '@/models/pengeluaran-model'
   import { useAppStore } from '@/stores/app-store'
   import { usePengeluaranStore } from '@/stores/pengeluaran-store'
   import { parse } from 'date-fns'
@@ -118,7 +118,7 @@
     tipeValidation,
   } from '@/action/validation/pengeluaran'
   import { pengeluaranFieldForm } from '@/models/action-model'
-  import { Mobil } from '@/models/mobil-model'
+  import type { Mobil } from '@/models/mobil-model'
 
   const props = defineProps({
     action: {

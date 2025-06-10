@@ -1,4 +1,4 @@
-import { Mobil } from '@/models/mobil-model'
+import type { Mobil } from '@/models/mobil-model'
 import { PengeluaranType } from '@/models/pengeluaran-model'
 import { useMobilStore } from '@/stores/mobil-store'
 import { usePengeluaranStore } from '@/stores/pengeluaran-store'

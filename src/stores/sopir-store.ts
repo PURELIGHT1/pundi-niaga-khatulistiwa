@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FormattedSopir, Sopir } from '@/models/sopir-model'
+import type { FormattedSopir, Sopir } from '@/models/sopir-model'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { defaultSopirForm } from '@/models/form'

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ApexOptions } from 'apexcharts'
+import type { ApexOptions } from 'apexcharts'
 import { defineStore } from 'pinia'
 import { RitaseChartType, RitaseMobilType, RitaseSopirType } from '@/models/ritase-model'
 import { toRef } from 'vue'

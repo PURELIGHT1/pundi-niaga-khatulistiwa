@@ -1,5 +1,5 @@
 import type { Ref } from 'vue'
-import { Notifikasi } from './notifikasi-model'
+import type { Notifikasi } from './notifikasi-model'
 import { UserJenis } from './user-model'
 import { useUserStore } from '@/stores/user-store'
 import router from '@/plugins/router'

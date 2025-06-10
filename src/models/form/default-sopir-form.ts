@@ -1,4 +1,4 @@
-import { SopirForm } from '../sopir-model'
+import type { SopirForm } from '../sopir-model'
 
 export const defaultSopirForm: SopirForm = {
   nama_lengkap: {

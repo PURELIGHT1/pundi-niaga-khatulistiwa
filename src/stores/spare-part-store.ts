@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FormattedSparePart, SparePart, StatusSparePart } from '@/models/spare-part-model'
+import type { FormattedSparePart, SparePart, StatusSparePart } from '@/models/spare-part-model'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { defaultSparePartForm } from '@/models/form'

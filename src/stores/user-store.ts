@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FormattedUser, User, UserAction, UserJenis } from '@/models/user-model'
+import { UserJenis, type FormattedUser, type User, type UserAction } from '@/models/user-model'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import router from '@/plugins/router'

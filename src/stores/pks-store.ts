@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FormattedPKS, PKS } from '@/models/pks-model'
+import type { FormattedPKS, PKS } from '@/models/pks-model'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { defaultPKSForm } from '@/models/form'

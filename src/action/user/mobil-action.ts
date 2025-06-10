@@ -1,7 +1,7 @@
-import { ActionModel } from '@/models/action-model'
+import type { ActionModel } from '@/models/action-model'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
-import { FormattedMobil, Mobil, MobilForm, MobilJenisBBM } from '@/models/mobil-model'
+import type { FormattedMobil, Mobil, MobilForm, MobilJenisBBM } from '@/models/mobil-model'
 import { checkMobilValidation } from '../validation/check-validation'
 
 export function mobilActions() {

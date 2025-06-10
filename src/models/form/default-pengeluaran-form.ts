@@ -1,4 +1,4 @@
-import { PengeluaranForm } from '../pengeluaran-model'
+import type { PengeluaranForm } from '../pengeluaran-model'
 
 export const defaultPengeluaranForm: PengeluaranForm = {
   mobil: {

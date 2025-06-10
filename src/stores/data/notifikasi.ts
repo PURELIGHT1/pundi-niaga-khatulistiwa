@@ -1,7 +1,7 @@
-import { FormattedNotifikasi, Notifikasi } from '@/models/notifikasi-model'
+import type { FormattedNotifikasi, Notifikasi } from '@/models/notifikasi-model'
 import { useUserStore } from '../user-store'
 import { formatWaktuRelative, randomNumber } from '@/utils/util'
-import { User } from '@/models/user-model'
+import type { User } from '@/models/user-model'
 import { useAppStore } from '../app-store'
 
 const notifs = [

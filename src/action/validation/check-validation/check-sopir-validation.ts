@@ -1,5 +1,5 @@
 import { useAppStore } from '@/stores/app-store'
-import { SopirForm } from '@/models/sopir-model'
+import type { SopirForm } from '@/models/sopir-model'
 import {
   asalPKSValidation,
   namaLengkapValidation,

@@ -1,4 +1,4 @@
-import { FormattedUser, User, UserJenis } from '@/models/user-model'
+import { UserJenis, type FormattedUser, type User } from '@/models/user-model'
 
 export function initializeUsers(): User[] {
   return [

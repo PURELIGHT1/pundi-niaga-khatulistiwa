@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { FormattedMobil } from './mobil-model'
-import { FormattedPendapatan } from './pendapatan-model'
-import { FormattedPengeluaran } from './pengeluaran-model'
-import { FormattedPKS } from './pks-model'
-import { FormattedSopir } from './sopir-model'
-import { FormattedSparePart } from './spare-part-model'
-import { FormattedUser, UserJenis } from './user-model'
+import type { FormattedMobil } from './mobil-model'
+import type { FormattedPendapatan } from './pendapatan-model'
+import type { FormattedPengeluaran } from './pengeluaran-model'
+import type { FormattedPKS } from './pks-model'
+import type { FormattedSopir } from './sopir-model'
+import type { FormattedSparePart } from './spare-part-model'
+import type { FormattedUser } from './user-model'
 import { computed, ref } from 'vue'
 import BerandaView from '@/views/BerandaView.vue'
 import AdminView from '@/views/AdminView.vue'
@@ -21,8 +21,9 @@ import RitaseView from '@/views/RitaseView.vue'
 import MasukView from '@/views/MasukView.vue'
 import { useNotifikasiStore } from '@/stores/notifikasi-store'
 import { useUserStore } from '@/stores/user-store'
-import { getAkunItems, TopBar } from './top-bar-model'
+import { getAkunItems, type TopBar } from './top-bar-model'
 import UbahPasswordView from '@/views/UbahPasswordView.vue'
+import { UserJenis } from './user-model';
 
 export const TRANSITION_DURATION = 1120
 export const WORKER_ERROR_MESSAGE = 'Web Workers are not supported in this browser.'

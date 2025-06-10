@@ -1,7 +1,7 @@
-import { ActionModel } from '@/models/action-model'
+import type { ActionModel } from '@/models/action-model'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
-import { FormattedSopir, Sopir, SopirForm } from '@/models/sopir-model'
+import type { FormattedSopir, Sopir, SopirForm } from '@/models/sopir-model'
 import { checkSopirValidation } from '../validation/check-validation'
 
 export function sopirActions() {

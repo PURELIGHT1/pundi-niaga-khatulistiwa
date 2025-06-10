@@ -1,4 +1,4 @@
-import { PendapatanForm } from '../pendapatan-model'
+import type { PendapatanForm } from '../pendapatan-model'
 
 export const defaultPendapatanForm: PendapatanForm = {
   sopir: {

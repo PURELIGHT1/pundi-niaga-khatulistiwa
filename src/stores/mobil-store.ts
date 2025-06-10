@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Mobil, FormattedMobil, MobilWarna } from '@/models/mobil-model'
+import type { Mobil, FormattedMobil, MobilWarna } from '@/models/mobil-model'
 import { useLocalStorage } from '@vueuse/core'
 import { defineStore } from 'pinia'
 import { parse } from 'date-fns'

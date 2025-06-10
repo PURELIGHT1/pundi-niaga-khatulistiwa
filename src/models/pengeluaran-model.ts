@@ -1,4 +1,4 @@
-import { Mobil } from './mobil-model'
+import type { Mobil } from './mobil-model'
 
 export interface Pengeluaran {
   id: number

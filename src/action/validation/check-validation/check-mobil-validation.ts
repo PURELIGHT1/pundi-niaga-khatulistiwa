@@ -10,7 +10,7 @@ import {
   nomorPolisiValidation,
   warnaValidation,
 } from '../mobil'
-import { MobilForm } from '@/models/mobil-model'
+import type { MobilForm } from '@/models/mobil-model'
 
 export async function checkMobilValidation(action: string, form: MobilForm): Promise<boolean> {
   const appStore = useAppStore()

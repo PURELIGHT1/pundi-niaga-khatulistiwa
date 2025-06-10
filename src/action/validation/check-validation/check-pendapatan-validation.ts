@@ -1,5 +1,5 @@
 import { useAppStore } from '@/stores/app-store'
-import { PendapatanForm } from '@/models/pendapatan-model'
+import type { PendapatanForm } from '@/models/pendapatan-model'
 import {
   hargaKlaimSusutValidation,
   mobilValidation,

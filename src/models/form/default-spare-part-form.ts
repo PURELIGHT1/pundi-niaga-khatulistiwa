@@ -1,4 +1,4 @@
-import { SparePartForm } from '../spare-part-model'
+import type { SparePartForm } from '../spare-part-model'
 
 export const defaultSparePartForm: SparePartForm = {
   merek: {

@@ -1,5 +1,5 @@
-import { Mobil } from './mobil-model'
-import { Sopir } from './sopir-model'
+import type { Mobil } from './mobil-model'
+import type { Sopir } from './sopir-model'
 
 export interface Pendapatan {
   id: number

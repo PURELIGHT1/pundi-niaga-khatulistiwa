@@ -1,4 +1,4 @@
-import { Mobil } from '@/models/mobil-model'
+import type { Mobil } from '@/models/mobil-model'
 import { useMobilStore } from '@/stores/mobil-store'
 import { usePendapatanStore } from '@/stores/pendapatan-store'
 import { nextTick } from 'vue'

@@ -1,5 +1,5 @@
-import { ActionModel } from '@/models/action-model'
-import { FormattedUser, User, UserForm, UserJenis } from '@/models/user-model'
+import type { ActionModel } from '@/models/action-model'
+import { UserJenis, type FormattedUser, type User, type UserForm } from '@/models/user-model'
 import router from '@/plugins/router'
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'

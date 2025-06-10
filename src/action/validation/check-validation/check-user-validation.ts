@@ -1,4 +1,4 @@
-import { UserForm } from '@/models/user-model'
+import type { UserForm } from '@/models/user-model'
 import { useAppStore } from '@/stores/app-store'
 import {
   emailValidation,

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Pendapatan, FormattedPendapatan, DeletePendapatan } from '@/models/pendapatan-model'
+import type { Pendapatan, FormattedPendapatan, DeletePendapatan } from '@/models/pendapatan-model'
 import { useLocalStorage } from '@vueuse/core'
 import { parse } from 'date-fns'
 import { defineStore } from 'pinia'

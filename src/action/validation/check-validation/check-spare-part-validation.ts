@@ -7,7 +7,7 @@ import {
   stokValidation,
   statusValidation,
 } from '../spare-part'
-import { SparePartForm } from '@/models/spare-part-model'
+import type { SparePartForm } from '@/models/spare-part-model'
 import { UserJenis } from '@/models/user-model'
 
 export async function checkSparePartValidation(

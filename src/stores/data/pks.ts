@@ -1,4 +1,4 @@
-import { FormattedPKS, PKS } from '@/models/pks-model'
+import type { FormattedPKS, PKS } from '@/models/pks-model'
 
 export function getFormattedPKSes(pks: PKS[]): FormattedPKS[] {
   return pks.map((pks, index) => {

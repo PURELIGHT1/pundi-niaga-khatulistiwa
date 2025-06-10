@@ -1,4 +1,4 @@
-import { FormattedSparePart, SparePart, StatusSparePart } from '@/models/spare-part-model'
+import type { FormattedSparePart, SparePart, StatusSparePart } from '@/models/spare-part-model'
 import i18n from '@/plugins/i18n'
 
 export function getFormattedSpareParts(spare_parts: SparePart[]): FormattedSparePart[] {

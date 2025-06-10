@@ -1,8 +1,8 @@
 import { useAppStore } from '@/stores/app-store'
 import { useLocalStorage } from '@vueuse/core'
-import { Notifikasi, NotifikasiForm } from '@/models/notifikasi-model'
+import type { Notifikasi, NotifikasiForm } from '@/models/notifikasi-model'
 import { formatWaktuRelative } from '@/utils/util'
-import { User } from '@/models/user-model'
+import type { User } from '@/models/user-model'
 
 export function notifikasiActions() {
   const appStore = useAppStore()

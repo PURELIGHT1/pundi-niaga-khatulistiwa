@@ -1,5 +1,5 @@
 import { useAppStore } from '@/stores/app-store'
-import { PengeluaranForm } from '@/models/pengeluaran-model'
+import type { PengeluaranForm } from '@/models/pengeluaran-model'
 import {
   biayaValidation,
   keteranganValidation,

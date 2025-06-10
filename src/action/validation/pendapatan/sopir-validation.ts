@@ -1,4 +1,4 @@
-import { Sopir } from '@/models/sopir-model'
+import type { Sopir } from '@/models/sopir-model'
 import { usePendapatanStore } from '@/stores/pendapatan-store'
 import { useSopirStore } from '@/stores/sopir-store'
 import { nextTick } from 'vue'
