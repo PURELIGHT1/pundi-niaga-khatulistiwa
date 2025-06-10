@@ -38,8 +38,8 @@
 </template>
 
 <script setup lang="ts">
-import { Sopir } from '@/models/sopir-model'
-import { PropType } from 'vue'
+import type { Sopir } from '@/models/sopir-model'
+import type { PropType } from 'vue'
 
 defineProps({
   sopir: {

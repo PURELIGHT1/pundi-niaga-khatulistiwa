@@ -25,6 +25,15 @@ import { initializeNotifikasis } from '@/stores/data/notifikasi'
 
 const routeMasuk = ROUTES.find((r) => r.path === '/masuk')
 
+const appChildRoutes = ROUTES.filter((r) => r.path !== '/masuk').map((route) => ({
+  path: route.path,
+  name: route.name,
+  component: route.component,
+  meta: {
+    jenis: route.role,
+  },
+}))
+
 const routes = [
   {
     path: '/beranda',
@@ -33,14 +42,7 @@ const routes = [
     meta: {
       jenis: [UserJenis.Pemilik, UserJenis.Admin, UserJenis.Bengkel],
     },
-    children: ROUTES.filter((r) => r.path !== '/masuk').map((route) => ({
-      path: route.path,
-      name: route.name,
-      component: route.component,
-      meta: {
-        jenis: route.role,
-      },
-    })),
+    children: appChildRoutes,
   },
   ...(routeMasuk
     ? [
@@ -62,7 +64,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
-  routes: routes,
+  routes,
 })
 
 router.beforeEach(async (to, from, next) => {

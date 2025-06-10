@@ -93,11 +93,11 @@
     // WORKER_ERROR_MESSAGE,
     YEAR_OPTIONS,
   } from '@/models/app-model'
-  import { Mobil } from '@/models/mobil-model'
-  import { Pendapatan } from '@/models/pendapatan-model'
-  import { Pengeluaran } from '@/models/pengeluaran-model'
+  import { type Mobil } from '@/models/mobil-model'
+  import { type Pendapatan } from '@/models/pendapatan-model'
+  import { type Pengeluaran } from '@/models/pengeluaran-model'
   import { RitaseSopirType, RitaseChartType, RitaseMobilType } from '@/models/ritase-model'
-  import { Sopir } from '@/models/sopir-model'
+  import { type Sopir } from '@/models/sopir-model'
   import { useAppStore } from '@/stores/app-store'
   import { useMobilStore } from '@/stores/mobil-store'
   import { usePendapatanStore } from '@/stores/pendapatan-store'

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { MIN_YEAR } from '@/models/app-model'
-import { Pendapatan } from '@/models/pendapatan-model'
-import { Pengeluaran } from '@/models/pengeluaran-model'
+import { type Pendapatan } from '@/models/pendapatan-model'
+import { type Pengeluaran } from '@/models/pengeluaran-model'
 import { RitaseType } from '@/models/ritase-model'
 import i18n from '@/plugins/i18n'
-import { ApexOptions } from 'apexcharts'
+import { type ApexOptions } from 'apexcharts'
 
 function initYearlyObject() {
   const object: { [key: string]: number } = {}

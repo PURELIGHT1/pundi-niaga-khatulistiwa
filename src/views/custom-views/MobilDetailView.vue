@@ -56,9 +56,9 @@
 </template>
 
 <script setup lang="ts">
-import { Mobil } from '@/models/mobil-model'
+import type { Mobil } from '@/models/mobil-model'
 import i18n from '@/plugins/i18n'
-import { PropType } from 'vue'
+import type { PropType } from 'vue'
 
 defineProps({
   mobil: {

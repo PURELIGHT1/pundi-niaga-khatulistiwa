@@ -6,8 +6,8 @@
   import { TRANSITION_DURATION } from '@/models/app-model'
   import i18n from '@/plugins/i18n'
   import { delay } from '@/utils/util'
-  import ApexCharts, { ApexOptions } from 'apexcharts'
-  import { nextTick, onMounted, onUnmounted, PropType, ref, watch } from 'vue'
+  import ApexCharts, { type ApexOptions } from 'apexcharts'
+  import { nextTick, onMounted, onUnmounted, type PropType, ref, watch } from 'vue'
 
   const props = defineProps({
     options: {

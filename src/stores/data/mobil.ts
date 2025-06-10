@@ -1,4 +1,4 @@
-import type { FormattedMobil, Mobil, MobilJenisBBM, MobilWarna } from '@/models/mobil-model'
+import { type FormattedMobil, type Mobil, MobilJenisBBM, MobilWarna } from '@/models/mobil-model'
 import i18n from '@/plugins/i18n'
 import { randomNumber } from '@/utils/util'
 

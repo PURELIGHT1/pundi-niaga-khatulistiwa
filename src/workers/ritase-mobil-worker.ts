@@ -1,6 +1,6 @@
-import { Pendapatan } from '@/models/pendapatan-model'
+import { type Pendapatan } from '@/models/pendapatan-model'
 import { RitaseChartType, RitaseMobilType } from '@/models/ritase-model'
-import { Mobil } from '@/models/mobil-model'
+import { type Mobil } from '@/models/mobil-model'
 import i18n from '@/plugins/i18n'
 import { calculateSum, getChartOptions } from '@/stores/ritase-store'
 

@@ -65,7 +65,7 @@ import { userFieldForm } from '@/models/action-model'
 import { useUserStore } from '@/stores/user-store'
 import { findUserById } from '@/stores/data/user'
 import { kataSandiValidation } from '@/action/validation/user'
-import { User } from '@/models/user-model'
+import { type User } from '@/models/user-model'
 
 const appStore = useAppStore()
 const userStore = useUserStore()

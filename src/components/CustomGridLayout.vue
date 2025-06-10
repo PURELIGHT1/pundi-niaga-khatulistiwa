@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-  import { StyleValue } from 'vue'
+  import { type StyleValue } from 'vue'
   import { computed } from 'vue'
 
   const props = defineProps({

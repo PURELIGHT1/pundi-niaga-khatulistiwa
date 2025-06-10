@@ -80,8 +80,8 @@
 <script setup lang="ts">
   import CustomGridLayout from '@/components/CustomGridLayout.vue'
   import CustomTextField from '@/components/CustomTextField.vue'
-  import { DialogAction } from '@/models/app-model'
-  import { FormattedUser, UserJenis } from '@/models/user-model'
+  import type { DialogAction } from '@/models/app-model'
+  import { type FormattedUser, UserJenis } from '@/models/user-model'
   import { useAppStore } from '@/stores/app-store'
   import { useUserStore } from '@/stores/user-store'
   import {
