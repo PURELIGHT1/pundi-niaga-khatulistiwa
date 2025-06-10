@@ -1,6 +1,6 @@
  
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw  } from 'vue-router'
 import AppView from '@/views/AppView.vue'
 import { useAppStore } from '@/stores/app-store'
 import { useUserStore } from '@/stores/user-store'
@@ -34,7 +34,7 @@ const appChildRoutes = ROUTES.filter((r) => r.path !== '/masuk').map((route) => 
   },
 }))
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/beranda',
     name: 'App',
