@@ -1,0 +1,1557 @@
+[33mcommit b9bc63fdaf034d0b96daa3bbcd1a9a53c920641c[m[33m ([m[1;32mdevelopment[m[33m)[m
+Author: Ini Aku Bram <88739434+PURELIGHT1@users.noreply.github.com>
+Date:   Wed Jun 11 09:07:17 2025 +0700
+
+    dev without ritase
+
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex af8f95e..07d4108 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -11,6 +11,7 @@[m
+         "@vueuse/core": "^13.3.0",[m
+         "apexcharts": "^4.7.0",[m
+         "date-fns": "^4.1.0",[m
+[32m+[m[32m        "lightningcss": "^1.30.1",[m
+         "pinia": "^3.0.3",[m
+         "postcss-preset-env": "^10.2.2",[m
+         "vite-plugin-vuetify": "^2.1.1",[m
+[36m@@ -4232,6 +4233,15 @@[m
+         "url": "https://github.com/sponsors/sindresorhus"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/detect-libc": {[m
+[32m+[m[32m      "version": "2.0.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==",[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=8"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/electron-to-chromium": {[m
+       "version": "1.5.166",[m
+       "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.166.tgz",[m
+[36m@@ -5249,6 +5259,234 @@[m
+         "node": ">= 0.8.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/lightningcss": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss/-/lightningcss-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-xi6IyHML+c9+Q3W0S4fCQJOym42pyurFiJUHEcEyHS0CeKzia4yZDEsLlqOFykxOdHpNy0NmvVO31vcSqAxJCg==",[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "detect-libc": "^2.0.3"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "optionalDependencies": {[m
+[32m+[m[32m        "lightningcss-darwin-arm64": "1.30.1",[m
+[32m+[m[32m        "lightningcss-darwin-x64": "1.30.1",[m
+[32m+[m[32m        "lightningcss-freebsd-x64": "1.30.1",[m
+[32m+[m[32m        "lightningcss-linux-arm-gnueabihf": "1.30.1",[m
+[32m+[m[32m        "lightningcss-linux-arm64-gnu": "1.30.1",[m
+[32m+[m[32m        "lightningcss-linux-arm64-musl": "1.30.1",[m
+[32m+[m[32m        "lightningcss-linux-x64-gnu": "1.30.1",[m
+[32m+[m[32m        "lightningcss-linux-x64-musl": "1.30.1",[m
+[32m+[m[32m        "lightningcss-win32-arm64-msvc": "1.30.1",[m
+[32m+[m[32m        "lightningcss-win32-x64-msvc": "1.30.1"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-darwin-arm64": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-c8JK7hyE65X1MHMN+Viq9n11RRC7hgin3HhYKhrMyaXflk5GVplZ60IxyoVtzILeKr+xAJwg6zK6sjTBJ0FKYQ==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "arm64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "darwin"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-darwin-x64": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-k1EvjakfumAQoTfcXUcHQZhSpLlkAuEkdMBsI/ivWw9hL+7FtilQc0Cy3hrx0AAQrVtQAbMI7YjCgYgvn37PzA==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "x64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "darwin"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-freebsd-x64": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-freebsd-x64/-/lightningcss-freebsd-x64-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-kmW6UGCGg2PcyUE59K5r0kWfKPAVy4SltVeut+umLCFoJ53RdCUWxcRDzO1eTaxf/7Q2H7LTquFHPL5R+Gjyig==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "x64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "freebsd"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-linux-arm-gnueabihf": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-MjxUShl1v8pit+6D/zSPq9S9dQ2NPFSQwGvxBCYaBYLPlCWuPh9/t1MRS8iUaR8i+a6w7aps+B4N0S1TYP/R+Q==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "arm"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "linux"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-linux-arm64-gnu": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-gB72maP8rmrKsnKYy8XUuXi/4OctJiuQjcuqWNlJQ6jZiWqtPvqFziskH3hnajfvKB27ynbVCucKSm2rkQp4Bw==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "arm64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "linux"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-linux-arm64-musl": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-jmUQVx4331m6LIX+0wUhBbmMX7TCfjF5FoOH6SD1CttzuYlGNVpA7QnrmLxrsub43ClTINfGSYyHe2HWeLl5CQ==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "arm64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "linux"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-linux-x64-gnu": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-piWx3z4wN8J8z3+O5kO74+yr6ze/dKmPnI7vLqfSqI8bccaTGY5xiSGVIJBDd5K5BHlvVLpUB3S2YCfelyJ1bw==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "x64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "linux"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-linux-x64-musl": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-rRomAK7eIkL+tHY0YPxbc5Dra2gXlI63HL+v1Pdi1a3sC+tJTcFrHX+E86sulgAXeI7rSzDYhPSeHHjqFhqfeQ==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "x64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "linux"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-win32-arm64-msvc": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-win32-arm64-msvc/-/lightningcss-win32-arm64-msvc-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-mSL4rqPi4iXq5YVqzSsJgMVFENoa4nGTT/GjO2c0Yl9OuQfPsIfncvLrEW6RbbB24WtZ3xP/2CCmI3tNkNV4oA==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "arm64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "win32"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/lightningcss-win32-x64-msvc": {[m
+[32m+[m[32m      "version": "1.30.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.30.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-PVqXh48wh4T53F/1CCu8PIPCxLzWyCnn/9T5W1Jpmdy5h9Cwd+0YQS6/LwhHXSafuc61/xg9Lv5OrCby6a++jg==",[m
+[32m+[m[32m      "cpu": [[m
+[32m+[m[32m        "x64"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "license": "MPL-2.0",[m
+[32m+[m[32m      "optional": true,[m
+[32m+[m[32m      "os": [[m
+[32m+[m[32m        "win32"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 12.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "type": "opencollective",[m
+[32m+[m[32m        "url": "https://opencollective.com/parcel"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/locate-path": {[m
+       "version": "6.0.0",[m
+       "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-6.0.0.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 1a56dc0..8487d9a 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -18,6 +18,7 @@[m
+     "@vueuse/core": "^13.3.0",[m
+     "apexcharts": "^4.7.0",[m
+     "date-fns": "^4.1.0",[m
+[32m+[m[32m    "lightningcss": "^1.30.1",[m
+     "pinia": "^3.0.3",[m
+     "postcss-preset-env": "^10.2.2",[m
+     "vite-plugin-vuetify": "^2.1.1",[m
+[1mdiff --git a/src/declarations/shims-vue.d.ts b/src/declarations/shims-vue.d.ts[m
+[1mdeleted file mode 100644[m
+[1mindex ac1ded7..0000000[m
+[1m--- a/src/declarations/shims-vue.d.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,5 +0,0 @@[m
+[31m-declare module '*.vue' {[m
+[31m-  import { DefineComponent } from 'vue'[m
+[31m-  const component: DefineComponent<{}, {}, any>[m
+[31m-  export default component[m
+[31m-}[m
+[1mdiff --git a/src/models/app-model.ts b/src/models/app-model.ts[m
+[1mindex 36d451b..b82f61e 100644[m
+[1m--- a/src/models/app-model.ts[m
+[1m+++ b/src/models/app-model.ts[m
+[36m@@ -17,7 +17,6 @@[m [mimport SparePartView from '@/views/SparePartView.vue'[m
+ // import PKSView from "@/views/PKSView.vue";[m
+ import PendapatanView from '@/views/PendapatanView.vue'[m
+ import PengeluaranView from '@/views/PengeluaranView.vue'[m
+[31m-import RitaseView from '@/views/RitaseView.vue'[m
+ import MasukView from '@/views/MasukView.vue'[m
+ import { useNotifikasiStore } from '@/stores/notifikasi-store'[m
+ import { useUserStore } from '@/stores/user-store'[m
+[36m@@ -156,14 +155,6 @@[m [mexport const ROUTES = [[m
+     component: PengeluaranView,[m
+     role: [UserJenis.Pemilik, UserJenis.Admin],[m
+   },[m
+[31m-  {[m
+[31m-    path: '/ritase',[m
+[31m-    name: 'Ritase',[m
+[31m-    iconActive: '$clipboard-text',[m
+[31m-    iconPassive: '$clipboard-text-outline',[m
+[31m-    component: RitaseView,[m
+[31m-    role: [UserJenis.Pemilik, UserJenis.Admin],[m
+[31m-  },[m
+   {[m
+     path: '/masuk',[m
+     name: 'Masuk',[m
+[1mdiff --git a/src/models/ritase-model.ts b/src/models/ritase-model.ts[m
+[1mdeleted file mode 100644[m
+[1mindex 356c355..0000000[m
+[1m--- a/src/models/ritase-model.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,25 +0,0 @@[m
+[31m-export enum RitaseType {[m
+[31m-  Yearly = 'Tahunan',[m
+[31m-  Monthly = 'Bulanan',[m
+[31m-  Daily = 'Harian',[m
+[31m-}[m
+[31m-[m
+[31m-export enum RitaseSopirType {[m
+[31m-  JumlahPendapatan = 'Jumlah Pendapatan',[m
+[31m-  JumlahPengiriman = 'Jumlah Pengiriman',[m
+[31m-  UangMinyak = 'Uang Minyak',[m
+[31m-}[m
+[31m-[m
+[31m-export enum RitaseMobilType {[m
+[31m-  JumlahPendapatan = 'Jumlah Pendapatan',[m
+[31m-  // JumlahPengeluaran = 'Jumlah Pengeluaran',[m
+[31m-  JumlahPenggunaan = 'Jumlah Penggunaan',[m
+[31m-  HargaMobil = 'Harga Mobil',[m
+[31m-  BiayaPajak = 'Biaya Pajak',[m
+[31m-}[m
+[31m-[m
+[31m-export enum RitaseChartType {[m
+[31m-  Line = 'Garis',[m
+[31m-  Area = 'Area',[m
+[31m-  Bar = 'Batang',[m
+[31m-}[m
+[1mdiff --git a/src/stores/ritase-store.ts b/src/stores/ritase-store.ts[m
+[1mdeleted file mode 100644[m
+[1mindex aca186f..0000000[m
+[1m--- a/src/stores/ritase-store.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,154 +0,0 @@[m
+[31m-/* eslint-disable @typescript-eslint/no-explicit-any */[m
+[31m-[m
+[31m-import type { ApexOptions } from 'apexcharts'[m
+[31m-import { defineStore } from 'pinia'[m
+[31m-import { RitaseChartType, RitaseMobilType, RitaseSopirType } from '@/models/ritase-model'[m
+[31m-import { toRef } from 'vue'[m
+[31m-[m
+[31m-export const useRitaseStore = defineStore('ritase-store', {[m
+[31m-  state: () => ({[m
+[31m-    pendapatanOptions: null as ApexOptions | null,[m
+[31m-    pengeluaranOptions: null as ApexOptions | null,[m
+[31m-    keuntunganOptions: null as ApexOptions | null,[m
+[31m-    inputYear: new Date().getFullYear() as number | null,[m
+[31m-    inputMonth: null as number | null,[m
+[31m-    worker: null as Worker | null,[m
+[31m-[m
+[31m-    sopir: {[m
+[31m-      options: null as ApexOptions | null,[m
+[31m-      inputSopir: RitaseSopirType.JumlahPendapatan,[m
+[31m-      inputYear: null as number | null,[m
+[31m-      inputMonth: null as number | null,[m
+[31m-      chartType: RitaseChartType.Area as RitaseChartType,[m
+[31m-      numberFormatStyle: 'currency' as keyof Intl.NumberFormatOptionsStyleRegistry,[m
+[31m-      worker: null as Worker | null,[m
+[31m-    },[m
+[31m-[m
+[31m-    mobil: {[m
+[31m-      options: null as ApexOptions | null,[m
+[31m-      inputMobil: RitaseMobilType.JumlahPendapatan,[m
+[31m-      inputYear: null as number | null,[m
+[31m-      inputMonth: null as number | null,[m
+[31m-      chartType: RitaseChartType.Area as RitaseChartType,[m
+[31m-      numberFormatStyle: 'currency' as keyof Intl.NumberFormatOptionsStyleRegistry,[m
+[31m-      worker: null as Worker | null,[m
+[31m-    },[m
+[31m-  }),[m
+[31m-[m
+[31m-  actions: {},[m
+[31m-[m
+[31m-  getters: {[m
+[31m-    getSparklineItems(state) {[m
+[31m-      return [[m
+[31m-        {[m
+[31m-          options: state.pendapatanOptions,[m
+[31m-        },[m
+[31m-        {[m
+[31m-          options: state.pengeluaranOptions,[m
+[31m-        },[m
+[31m-        {[m
+[31m-          options: state.keuntunganOptions,[m
+[31m-        },[m
+[31m-      ][m
+[31m-    },[m
+[31m-[m
+[31m-    getChartItems(state) {[m
+[31m-      return [[m
+[31m-        {[m
+[31m-          model: 'sopir' as 'sopir' | 'mobil',[m
+[31m-          items: Object.values(RitaseSopirType),[m
+[31m-          label: 'Laporan Sopir',[m
+[31m-          icon: { active: '$ship-wheel', passive: '$steering' },[m
+[31m-          options: state.sopir.options,[m
+[31m-          inputModel: toRef(state.sopir, 'inputSopir'),[m
+[31m-          inputYear: toRef(state.sopir, 'inputYear'),[m
+[31m-          inputMonth: toRef(state.sopir, 'inputMonth'),[m
+[31m-          chartType: toRef(state.sopir, 'chartType'),[m
+[31m-          numberFormatStyle: state.sopir.numberFormatStyle,[m
+[31m-        },[m
+[31m-        {[m
+[31m-          model: 'mobil' as 'mobil' | 'mobil',[m
+[31m-          items: Object.values(RitaseMobilType),[m
+[31m-          label: 'Laporan Mobil',[m
+[31m-          icon: { active: '$car', passive: '$car-outline' },[m
+[31m-          options: state.mobil.options,[m
+[31m-          inputModel: toRef(state.mobil, 'inputMobil'),[m
+[31m-          inputYear: toRef(state.mobil, 'inputYear'),[m
+[31m-          inputMonth: toRef(state.mobil, 'inputMonth'),[m
+[31m-          chartType: toRef(state.mobil, 'chartType'),[m
+[31m-          numberFormatStyle: state.mobil.numberFormatStyle,[m
+[31m-        },[m
+[31m-      ][m
+[31m-    },[m
+[31m-  },[m
+[31m-})[m
+[31m-[m
+[31m-export function calculateSum(values: number[]) {[m
+[31m-  return values.reduce((accumulator, value) => {[m
+[31m-    accumulator += value[m
+[31m-    return accumulator[m
+[31m-  }, 0)[m
+[31m-}[m
+[31m-[m
+[31m-export function getChartOptions([m
+[31m-  model: 'sopir' | 'mobil',[m
+[31m-  title: string,[m
+[31m-  subtitle: string,[m
+[31m-  data: number[],[m
+[31m-  categories: any,[m
+[31m-  chartType: ApexChart['type'],[m
+[31m-): ApexOptions {[m
+[31m-  return {[m
+[31m-    chart: {[m
+[31m-      id: `${model}-${title.replace(/ /g, '-')}`,[m
+[31m-      type: chartType,[m
+[31m-      width: '100%',[m
+[31m-      height: '480px',[m
+[31m-      toolbar: {[m
+[31m-        offsetX: -30,[m
+[31m-        offsetY: 11.5,[m
+[31m-      },[m
+[31m-    },[m
+[31m-    title: {[m
+[31m-      text: title,[m
+[31m-      offsetX: 30,[m
+[31m-      style: {[m
+[31m-        fontSize: '24px',[m
+[31m-      },[m
+[31m-    },[m
+[31m-    subtitle: {[m
+[31m-      text: subtitle,[m
+[31m-      offsetX: 30,[m
+[31m-      style: {[m
+[31m-        fontSize: '16px',[m
+[31m-      },[m
+[31m-    },[m
+[31m-    series: [[m
+[31m-      {[m
+[31m-        name: title,[m
+[31m-        data: data,[m
+[31m-      },[m
+[31m-    ],[m
+[31m-    xaxis: {[m
+[31m-      categories: categories,[m
+[31m-      tooltip: {[m
+[31m-        enabled: false,[m
+[31m-      },[m
+[31m-    },[m
+[31m-    plotOptions: {[m
+[31m-      bar: {[m
+[31m-        borderRadius: 10,[m
+[31m-        dataLabels: {[m
+[31m-          orientation: 'vertical',[m
+[31m-        },[m
+[31m-      },[m
+[31m-    },[m
+[31m-    dataLabels: {[m
+[31m-      enabled: chartType === 'bar',[m
+[31m-    },[m
+[31m-    tooltip: {[m
+[31m-      enabled: true,[m
+[31m-    },[m
+[31m-    colors: ['#1B5E20'],[m
+[31m-  }[m
+[31m-}[m
+[1mdiff --git a/src/styles/app-style.css b/src/styles/app-style.css[m
+[1mindex 4d557b2..700d90e 100644[m
+[1m--- a/src/styles/app-style.css[m
+[1m+++ b/src/styles/app-style.css[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-@import url("./transition-style.css");[m
+[32m+[m[32m@import url('./transition-style.css');[m
+ [m
+ :root {[m
+   --transition-duration: 1120ms;[m
+[1mdiff --git a/src/views/RitaseView.vue b/src/views/RitaseView.vue[m
+[1mdeleted file mode 100644[m
+[1mindex d689f2c..0000000[m
+[1m--- a/src/views/RitaseView.vue[m
+[1m+++ /dev/null[m
+[36m@@ -1,265 +0,0 @@[m
+[31m-<template>[m
+[31m-  <VFadeTransition style="transition-duration: var(--transition-duration) !important">[m
+[31m-    <VLayout v-if="appStore.active.child" class="d-scroll pa-2 overflow-auto" width="0px" min-height="fit-content"[m
+[31m-      max-height="100vh">[m
+[31m-      <VLayout class="d-flex flex-column mt-8">[m
+[31m-        <VForm class="mb-2 d-flex">[m
+[31m-          <CustomSelect v-model="ritaseStore.inputYear" :items="YEAR_OPTIONS" label="Tahun"[m
+[31m-            placeholder="Pilih Salah Satu" :prepend-inner-icon="{[m
+[31m-              active: '$calendar',[m
+[31m-              passive: '$calendar-outline',[m
+[31m-            }" clearable @update:model-value="ritaseStore.inputMonth = null" />[m
+[31m-[m
+[31m-          <VSlideXTransition group>[m
+[31m-            <div v-if="ritaseStore.inputYear" class="d-flex align-center">[m
+[31m-              <VDivider class="mx-1" vertical />[m
+[31m-              <CustomSelect v-model="ritaseStore.inputMonth" :items="MONTH_OPTIONS" item-title="title"[m
+[31m-                item-value="value" label="Bulan" placeholder="Pilih Salah Satu" :prepend-inner-icon="{[m
+[31m-                  active: '$calendar-month',[m
+[31m-                  passive: '$calendar-month-outline',[m
+[31m-                }" clearable />[m
+[31m-            </div>[m
+[31m-          </VSlideXTransition>[m
+[31m-        </VForm>[m
+[31m-[m
+[31m-        <CustomGridLayout grid-template-columns="repeat(3, 1fr)" gap="8px" width="100%">[m
+[31m-          <VCard v-for="(item, i) in ritaseStore.getSparklineItems" :key="i" min-width="360px" min-height="240px">[m
+[31m-            <CustomChart v-if="item.options" class="pt-2" :options="item.options" />[m
+[31m-            <VSkeletonLoader v-else :type="['ossein']" height="240px" />[m
+[31m-          </VCard>[m
+[31m-[m
+[31m-          <VCard v-for="(item, i) in ritaseStore.getChartItems" :key="i" class="pa-2" style="grid-column: span 3"[m
+[31m-            min-width="360px" min-height="575px">[m
+[31m-            <VForm class="mb-2 d-flex">[m
+[31m-              <CustomSelect v-model="item.inputModel.value" :items="item.items" :label="item.label"[m
+[31m-                placeholder="Pilih Salah Satu" :prepend-inner-icon="item.icon" />[m
+[31m-              <VDivider class="mx-1" vertical />[m
+[31m-[m
+[31m-              <VFadeTransition group>[m
+[31m-                <template v-if="[m
+[31m-                  (item.model === 'sopir' &&[m
+[31m-                    [[m
+[31m-                      RitaseSopirType.JumlahPendapatan,[m
+[31m-                      RitaseSopirType.JumlahPengiriman,[m
+[31m-                    ].includes(item.inputModel.value as RitaseSopirType)) ||[m
+[31m-                  (item.model === 'mobil' &&[m
+[31m-                    [[m
+[31m-                      RitaseMobilType.JumlahPendapatan,[m
+[31m-                      // RitaseMobilType.JumlahPengeluaran,[m
+[31m-                      RitaseMobilType.JumlahPenggunaan,[m
+[31m-                    ].includes(item.inputModel.value as RitaseMobilType))[m
+[31m-                ">[m
+[31m-                  <CustomSelect v-model="item.inputYear.value" :items="YEAR_OPTIONS" label="Tahun"[m
+[31m-                    placeholder="Pilih Salah Satu" :prepend-inner-icon="{[m
+[31m-                      active: '$calendar',[m
+[31m-                      passive: '$calendar-outline',[m
+[31m-                    }" clearable @update:model-value="item.inputMonth.value = null" />[m
+[31m-[m
+[31m-                  <template v-if="item.inputYear.value">[m
+[31m-                    <VDivider class="mx-1" vertical />[m
+[31m-                    <CustomSelect v-model="item.inputMonth.value" :items="MONTH_OPTIONS" item-title="title"[m
+[31m-                      item-value="value" label="Bulan" placeholder="Pilih Salah Satu" :prepend-inner-icon="{[m
+[31m-                        active: '$calendar-month',[m
+[31m-                        passive: '$calendar-month-outline',[m
+[31m-                      }" clearable />[m
+[31m-                  </template>[m
+[31m-                  <VDivider class="mx-1" vertical />[m
+[31m-                </template>[m
+[31m-              </VFadeTransition>[m
+[31m-[m
+[31m-              <CustomSelect v-model="item.chartType.value" :items="Object.values(RitaseChartType)" label="Tipe Grafik"[m
+[31m-                placeholder="Pilih Salah Satu" :prepend-inner-icon="{[m
+[31m-                  active: '$chart-box',[m
+[31m-                  passive: '$chart-box-outline',[m
+[31m-                }" />[m
+[31m-            </VForm>[m
+[31m-[m
+[31m-            <CustomChart v-if="item.options" class="pt-2" :options="item.options"[m
+[31m-              :number-format-style="item.numberFormatStyle" />[m
+[31m-            <VSkeletonLoader v-else :type="['ossein']" height="480px" />[m
+[31m-          </VCard>[m
+[31m-        </CustomGridLayout>[m
+[31m-      </VLayout>[m
+[31m-    </VLayout>[m
+[31m-  </VFadeTransition>[m
+[31m-</template>[m
+[31m-[m
+[31m-<script setup lang="ts">[m
+[31m-  import CustomChart from '@/components/CustomChart.vue'[m
+[31m-  import CustomGridLayout from '@/components/CustomGridLayout.vue'[m
+[31m-  import CustomSelect from '@/components/CustomSelect.vue'[m
+[31m-  import {[m
+[31m-    MONTH_OPTIONS,[m
+[31m-    // WORKER_ERROR_MESSAGE,[m
+[31m-    YEAR_OPTIONS,[m
+[31m-  } from '@/models/app-model'[m
+[31m-  import { type Mobil } from '@/models/mobil-model'[m
+[31m-  import { type Pendapatan } from '@/models/pendapatan-model'[m
+[31m-  import { type Pengeluaran } from '@/models/pengeluaran-model'[m
+[31m-  import { RitaseSopirType, RitaseChartType, RitaseMobilType } from '@/models/ritase-model'[m
+[31m-  import { type Sopir } from '@/models/sopir-model'[m
+[31m-  import { useAppStore } from '@/stores/app-store'[m
+[31m-  import { useMobilStore } from '@/stores/mobil-store'[m
+[31m-  import { usePendapatanStore } from '@/stores/pendapatan-store'[m
+[31m-  import { usePengeluaranStore } from '@/stores/pengeluaran-store'[m
+[31m-  import { useRitaseStore } from '@/stores/ritase-store'[m
+[31m-  import { useSopirStore } from '@/stores/sopir-store'[m
+[31m-  import { nextTick, watch } from 'vue'[m
+[31m-[m
+[31m-  const appStore = useAppStore()[m
+[31m-  const sopirStore = useSopirStore()[m
+[31m-  const mobilStore = useMobilStore()[m
+[31m-  const pendapatanStore = usePendapatanStore()[m
+[31m-  const pengeluaranStore = usePengeluaranStore()[m
+[31m-  const ritaseStore = useRitaseStore()[m
+[31m-[m
+[31m-  watch([m
+[31m-    () => [[m
+[31m-      pendapatanStore.pendapatans,[m
+[31m-      pengeluaranStore.pengeluarans,[m
+[31m-      ritaseStore.inputYear,[m
+[31m-      ritaseStore.inputMonth,[m
+[31m-    ],[m
+[31m-    (values) => {[m
+[31m-      if ((values[0] as Pendapatan[]).length > 0 && (values[1] as Pengeluaran[]).length > 0)[m
+[31m-        if (ritaseStore.worker) {[m
+[31m-          ; (ritaseStore.worker as Worker).terminate()[m
+[31m-          ritaseStore.worker = null[m
+[31m-        }[m
+[31m-[m
+[31m-      if (window.Worker) {[m
+[31m-        ritaseStore.pendapatanOptions = null[m
+[31m-        ritaseStore.pengeluaranOptions = null[m
+[31m-        ritaseStore.keuntunganOptions = null[m
+[31m-[m
+[31m-        ritaseStore.worker = new Worker(new URL('@/workers/ritase-worker.ts', import.meta.url), {[m
+[31m-          type: 'module',[m
+[31m-        })[m
+[31m-[m
+[31m-          ; (ritaseStore.worker as Worker).onmessage = (event) => {[m
+[31m-            ritaseStore.pendapatanOptions = JSON.parse(event.data.pendapatanOptions)[m
+[31m-            ritaseStore.pengeluaranOptions = JSON.parse(event.data.pengeluaranOptions)[m
+[31m-            ritaseStore.keuntunganOptions = JSON.parse(event.data.keuntunganOptions)[m
+[31m-[m
+[31m-            nextTick(() => {[m
+[31m-              appStore.loading = false[m
+[31m-            })[m
+[31m-          }[m
+[31m-[m
+[31m-          ; (ritaseStore.worker as Worker).postMessage({[m
+[31m-            pendapatans: JSON.stringify(values[0]),[m
+[31m-            pengeluarans: JSON.stringify(values[1]),[m
+[31m-            inputYear: ritaseStore.inputYear,[m
+[31m-            inputMonth: ritaseStore.inputMonth,[m
+[31m-          })[m
+[31m-      } else {[m
+[31m-        // console.error(WORKER_ERROR_MESSAGE);[m
+[31m-      }[m
+[31m-    },[m
+[31m-    { immediate: true, deep: true },[m
+[31m-  )[m
+[31m-[m
+[31m-  watch([m
+[31m-    () => [[m
+[31m-      pendapatanStore.pendapatans,[m
+[31m-      sopirStore.sopirs,[m
+[31m-      ritaseStore.sopir.inputSopir,[m
+[31m-      ritaseStore.sopir.inputYear,[m
+[31m-      ritaseStore.sopir.inputMonth,[m
+[31m-      ritaseStore.sopir.chartType,[m
+[31m-    ],[m
+[31m-    (values) => {[m
+[31m-      if ((values[0] as Pendapatan[]).length > 0 && (values[1] as Sopir[]).length > 0)[m
+[31m-        if (ritaseStore.sopir.worker) {[m
+[31m-          ; (ritaseStore.sopir.worker as Worker).terminate()[m
+[31m-          ritaseStore.sopir.worker = null[m
+[31m-        }[m
+[31m-[m
+[31m-      if (window.Worker) {[m
+[31m-        ritaseStore.sopir.options = null[m
+[31m-        ritaseStore.sopir.numberFormatStyle = 'currency'[m
+[31m-[m
+[31m-        ritaseStore.sopir.worker = new Worker([m
+[31m-          new URL('@/workers/ritase-sopir-worker.ts', import.meta.url),[m
+[31m-          { type: 'module' },[m
+[31m-        )[m
+[31m-[m
+[31m-          ; (ritaseStore.sopir.worker as Worker).onmessage = (event) => {[m
+[31m-            ritaseStore.sopir.options = JSON.parse(event.data.options)[m
+[31m-            ritaseStore.sopir.numberFormatStyle = event.data.numberFormatStyle[m
+[31m-[m
+[31m-            nextTick(() => {[m
+[31m-              appStore.loading = false[m
+[31m-            })[m
+[31m-          }[m
+[31m-[m
+[31m-          ; (ritaseStore.sopir.worker as Worker).postMessage({[m
+[31m-            pendapatans: JSON.stringify(values[0]),[m
+[31m-            sopirs: JSON.stringify(values[1]),[m
+[31m-            inputSopir: ritaseStore.sopir.inputSopir,[m
+[31m-            inputYear: ritaseStore.sopir.inputYear,[m
+[31m-            inputMonth: ritaseStore.sopir.inputMonth,[m
+[31m-            chartType: ritaseStore.sopir.chartType,[m
+[31m-          })[m
+[31m-      } else {[m
+[31m-        // console.error(WORKER_ERROR_MESSAGE);[m
+[31m-      }[m
+[31m-    },[m
+[31m-    { immediate: true, deep: true },[m
+[31m-  )[m
+[31m-[m
+[31m-  watch([m
+[31m-    () => [[m
+[31m-      pendapatanStore.pendapatans,[m
+[31m-      pengeluaranStore.pengeluarans,[m
+[31m-      mobilStore.mobils,[m
+[31m-      ritaseStore.mobil.inputMobil,[m
+[31m-      ritaseStore.mobil.inputYear,[m
+[31m-      ritaseStore.mobil.inputMonth,[m
+[31m-      ritaseStore.mobil.chartType,[m
+[31m-    ],[m
+[31m-    (values) => {[m
+[31m-      if ([m
+[31m-        (values[0] as Pendapatan[]).length > 0 &&[m
+[31m-        (values[1] as Pengeluaran[]).length > 0 &&[m
+[31m-        (values[2] as Mobil[]).length > 0[m
+[31m-      )[m
+[31m-        if (ritaseStore.mobil.worker) {[m
+[31m-          ; (ritaseStore.mobil.worker as Worker).terminate()[m
+[31m-          ritaseStore.mobil.worker = null[m
+[31m-        }[m
+[31m-[m
+[31m-      if (window.Worker) {[m
+[31m-        ritaseStore.mobil.options = null[m
+[31m-        ritaseStore.mobil.numberFormatStyle = 'currency'[m
+[31m-[m
+[31m-        ritaseStore.mobil.worker = new Worker([m
+[31m-          new URL('@/workers/ritase-mobil-worker.ts', import.meta.url),[m
+[31m-          { type: 'module' },[m
+[31m-        )[m
+[31m-[m
+[31m-          ; (ritaseStore.mobil.worker as Worker).onmessage = (event) => {[m
+[31m-            ritaseStore.mobil.options = JSON.parse(event.data.options)[m
+[31m-            ritaseStore.mobil.numberFormatStyle = event.data.numberFormatStyle[m
+[31m-[m
+[31m-            nextTick(() => {[m
+[31m-              appStore.loading = false[m
+[31m-            })[m
+[31m-          }[m
+[31m-[m
+[31m-          ; (ritaseStore.mobil.worker as Worker).postMessage({[m
+[31m-            pendapatans: JSON.stringify(values[0]),[m
+[31m-            //pengeluarans: JSON.stringify(values[1]),[m
+[31m-            mobils: JSON.stringify(values[2]),[m
+[31m-            inputMobil: ritaseStore.mobil.inputMobil,[m
+[31m-            inputYear: ritaseStore.mobil.inputYear,[m
+[31m-            inputMonth: ritaseStore.mobil.inputMonth,[m
+[31m-            chartType: ritaseStore.mobil.chartType,[m
+[31m-          })[m
+[31m-      } else {[m
+[31m-        // console.error(WORKER_ERROR_MESSAGE);[m
+[31m-      }[m
+[31m-    },[m
+[31m-    { immediate: true, deep: true },[m
+[31m-  )[m
+[31m-</script>[m
+[1mdiff --git a/src/workers/ritase-mobil-worker.ts b/src/workers/ritase-mobil-worker.ts[m
+[1mdeleted file mode 100644[m
+[1mindex cdb6bc0..0000000[m
+[1m--- a/src/workers/ritase-mobil-worker.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,104 +0,0 @@[m
+[31m-import { type Pendapatan } from '@/models/pendapatan-model'[m
+[31m-import { RitaseChartType, RitaseMobilType } from '@/models/ritase-model'[m
+[31m-import { type Mobil } from '@/models/mobil-model'[m
+[31m-import i18n from '@/plugins/i18n'[m
+[31m-import { calculateSum, getChartOptions } from '@/stores/ritase-store'[m
+[31m-[m
+[31m-function calculateMobils([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  mobil: Mobil,[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number | null,[m
+[31m-) {[m
+[31m-  const objectPendapatans = pendapatans.reduce([m
+[31m-    (accumulator, pendapatan) => {[m
+[31m-      const date = new Date(pendapatan.tanggal_bongkar)[m
+[31m-      if ([m
+[31m-        date.getFullYear() === inputYear &&[m
+[31m-        (inputMonth === null || date.getMonth() === inputMonth) &&[m
+[31m-        pendapatan.id_mobil === mobil.id[m
+[31m-      ) {[m
+[31m-        accumulator.jumlah_pendapatan += Math.round(pendapatan.pendapatan_bruto)[m
+[31m-        accumulator.jumlah_penggunaan++[m
+[31m-      }[m
+[31m-[m
+[31m-      return accumulator[m
+[31m-    },[m
+[31m-    { jumlah_pendapatan: 0, jumlah_penggunaan: 0 },[m
+[31m-  )[m
+[31m-[m
+[31m-  return { ...objectPendapatans }[m
+[31m-}[m
+[31m-[m
+[31m-function getData([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  mobils: Mobil[],[m
+[31m-  inputMobil: RitaseMobilType,[m
+[31m-  inputYear: number | null,[m
+[31m-  inputMonth: number | null,[m
+[31m-  chartType: ApexChart['type'],[m
+[31m-) {[m
+[31m-  const categories = mobils.map((mobil) => mobil.nomor_polisi)[m
+[31m-  const resultMobils = mobils.map((mobil) => {[m
+[31m-    if (inputYear) {[m
+[31m-      return calculateMobils(pendapatans, mobil, inputYear, inputMonth)[m
+[31m-    }[m
+[31m-[m
+[31m-    return {[m
+[31m-      jumlah_pendapatan: mobil.jumlah_pendapatan,[m
+[31m-      jumlah_penggunaan: mobil.jumlah_penggunaan,[m
+[31m-    }[m
+[31m-  })[m
+[31m-[m
+[31m-  let data[m
+[31m-  let numberFormatStyle = 'currency' as keyof Intl.NumberFormatOptionsStyleRegistry[m
+[31m-[m
+[31m-  if (inputMobil === RitaseMobilType.JumlahPendapatan) {[m
+[31m-    data = resultMobils.map((mobil) => mobil.jumlah_pendapatan)[m
+[31m-  } else if (inputMobil === RitaseMobilType.JumlahPenggunaan) {[m
+[31m-    data = resultMobils.map((mobil) => mobil.jumlah_penggunaan)[m
+[31m-    numberFormatStyle = 'decimal'[m
+[31m-  } else if (inputMobil === RitaseMobilType.HargaMobil) {[m
+[31m-    data = mobils.map((mobil) => mobil.harga)[m
+[31m-  } else {[m
+[31m-    data = mobils.map((mobil) => mobil.biaya_pajak)[m
+[31m-  }[m
+[31m-[m
+[31m-  const options = getChartOptions([m
+[31m-    'mobil',[m
+[31m-    inputMobil,[m
+[31m-    `Total: ${i18n.global.n(calculateSum(data), numberFormatStyle, 'id')}`,[m
+[31m-    data,[m
+[31m-    categories,[m
+[31m-    chartType,[m
+[31m-  )[m
+[31m-[m
+[31m-  return { options, numberFormatStyle }[m
+[31m-}[m
+[31m-[m
+[31m-self.onmessage = function (event) {[m
+[31m-  const pendapatans: Pendapatan[] = JSON.parse(event.data.pendapatans)[m
+[31m-  const mobils: Mobil[] = JSON.parse(event.data.mobils)[m
+[31m-  const inputMobil: RitaseMobilType = event.data.inputMobil[m
+[31m-  const inputYear: number | null = event.data.inputYear[m
+[31m-  const inputMonth: number | null = event.data.inputMonth[m
+[31m-  const chartType: RitaseChartType = event.data.chartType[m
+[31m-[m
+[31m-  const data = getData([m
+[31m-    pendapatans,[m
+[31m-    mobils,[m
+[31m-    inputMobil,[m
+[31m-    inputYear,[m
+[31m-    inputMonth,[m
+[31m-    chartType === RitaseChartType.Line[m
+[31m-      ? 'line'[m
+[31m-      : chartType === RitaseChartType.Bar[m
+[31m-        ? 'bar'[m
+[31m-        : 'area',[m
+[31m-  )[m
+[31m-[m
+[31m-  self.postMessage({[m
+[31m-    options: JSON.stringify(data.options),[m
+[31m-    numberFormatStyle: data.numberFormatStyle,[m
+[31m-  })[m
+[31m-}[m
+[1mdiff --git a/src/workers/ritase-sopir-worker.ts b/src/workers/ritase-sopir-worker.ts[m
+[1mdeleted file mode 100644[m
+[1mindex 3008f32..0000000[m
+[1m--- a/src/workers/ritase-sopir-worker.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,101 +0,0 @@[m
+[31m-import { type Pendapatan } from '@/models/pendapatan-model'[m
+[31m-import { RitaseChartType, RitaseSopirType } from '@/models/ritase-model'[m
+[31m-import { type Sopir } from '@/models/sopir-model'[m
+[31m-import i18n from '@/plugins/i18n'[m
+[31m-import { calculateSum, getChartOptions } from '@/stores/ritase-store'[m
+[31m-[m
+[31m-function calculateSopirs([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  sopir: Sopir,[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number | null,[m
+[31m-) {[m
+[31m-  return pendapatans.reduce([m
+[31m-    (accumulator, pendapatan) => {[m
+[31m-      const date = new Date(pendapatan.tanggal_bongkar)[m
+[31m-[m
+[31m-      if ([m
+[31m-        date.getFullYear() === inputYear &&[m
+[31m-        (inputMonth === null || date.getMonth() === inputMonth) &&[m
+[31m-        pendapatan.id_sopir === sopir.id[m
+[31m-      ) {[m
+[31m-        accumulator.jumlah_pendapatan += Math.round(pendapatan.pendapatan_bruto)[m
+[31m-        accumulator.jumlah_pengiriman++[m
+[31m-      }[m
+[31m-[m
+[31m-      return accumulator[m
+[31m-    },[m
+[31m-    { jumlah_pendapatan: 0, jumlah_pengiriman: 0 },[m
+[31m-  )[m
+[31m-}[m
+[31m-[m
+[31m-function getData([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  sopirs: Sopir[],[m
+[31m-  inputSopir: RitaseSopirType,[m
+[31m-  inputYear: number | null,[m
+[31m-  inputMonth: number | null,[m
+[31m-  chartType: ApexChart['type'],[m
+[31m-) {[m
+[31m-  const categories = sopirs.map((sopir) => sopir.nama_lengkap)[m
+[31m-  const resultSopirs = sopirs.map((sopir) => {[m
+[31m-    if (inputYear) {[m
+[31m-      return calculateSopirs(pendapatans, sopir, inputYear, inputMonth)[m
+[31m-    }[m
+[31m-[m
+[31m-    return {[m
+[31m-      jumlah_pendapatan: sopir.jumlah_pendapatan,[m
+[31m-      jumlah_pengiriman: sopir.jumlah_pengiriman,[m
+[31m-    }[m
+[31m-  })[m
+[31m-[m
+[31m-  let data[m
+[31m-  let numberFormatStyle = 'currency' as keyof Intl.NumberFormatOptionsStyleRegistry[m
+[31m-[m
+[31m-  if (inputSopir === RitaseSopirType.JumlahPendapatan) {[m
+[31m-    data = resultSopirs.map((sopir) => sopir.jumlah_pendapatan)[m
+[31m-  } else if (inputSopir === RitaseSopirType.JumlahPengiriman) {[m
+[31m-    data = resultSopirs.map((sopir) => sopir.jumlah_pengiriman)[m
+[31m-    numberFormatStyle = 'decimal'[m
+[31m-  } else {[m
+[31m-    data = sopirs.map((sopir) => sopir.uang_minyak)[m
+[31m-  }[m
+[31m-[m
+[31m-  const options = getChartOptions([m
+[31m-    'sopir',[m
+[31m-    inputSopir,[m
+[31m-    `Total: ${i18n.global.n(calculateSum(data), numberFormatStyle, 'id')}`,[m
+[31m-    data,[m
+[31m-    categories,[m
+[31m-    chartType,[m
+[31m-  )[m
+[31m-[m
+[31m-  return { options, numberFormatStyle }[m
+[31m-}[m
+[31m-[m
+[31m-self.onmessage = function (event) {[m
+[31m-  const pendapatans: Pendapatan[] = JSON.parse(event.data.pendapatans)[m
+[31m-  const sopirs: Sopir[] = JSON.parse(event.data.sopirs)[m
+[31m-  const inputSopir: RitaseSopirType = event.data.inputSopir[m
+[31m-  const inputYear: number | null = event.data.inputYear[m
+[31m-  const inputMonth: number | null = event.data.inputMonth[m
+[31m-  const chartType: RitaseChartType = event.data.chartType[m
+[31m-[m
+[31m-  const data = getData([m
+[31m-    pendapatans,[m
+[31m-    sopirs,[m
+[31m-    inputSopir,[m
+[31m-    inputYear,[m
+[31m-    inputMonth,[m
+[31m-    chartType === RitaseChartType.Line[m
+[31m-      ? 'line'[m
+[31m-      : chartType === RitaseChartType.Bar[m
+[31m-        ? 'bar'[m
+[31m-        : 'area',[m
+[31m-  )[m
+[31m-[m
+[31m-  self.postMessage({[m
+[31m-    options: JSON.stringify(data.options),[m
+[31m-    numberFormatStyle: data.numberFormatStyle,[m
+[31m-  })[m
+[31m-}[m
+[1mdiff --git a/src/workers/ritase-worker.ts b/src/workers/ritase-worker.ts[m
+[1mdeleted file mode 100644[m
+[1mindex 77d4196..0000000[m
+[1m--- a/src/workers/ritase-worker.ts[m
+[1m+++ /dev/null[m
+[36m@@ -1,449 +0,0 @@[m
+[31m-/* eslint-disable @typescript-eslint/no-explicit-any */[m
+[31m-[m
+[31m-import { MIN_YEAR } from '@/models/app-model'[m
+[31m-import { type Pendapatan } from '@/models/pendapatan-model'[m
+[31m-import { type Pengeluaran } from '@/models/pengeluaran-model'[m
+[31m-import { RitaseType } from '@/models/ritase-model'[m
+[31m-import i18n from '@/plugins/i18n'[m
+[31m-import { type ApexOptions } from 'apexcharts'[m
+[31m-[m
+[31m-function initYearlyObject() {[m
+[31m-  const object: { [key: string]: number } = {}[m
+[31m-  const startDate = new Date(MIN_YEAR, 0, 1)[m
+[31m-  const endDate = new Date()[m
+[31m-  endDate.setHours(0, 0, 0, 0)[m
+[31m-[m
+[31m-  while (startDate.getTime() <= endDate.getTime()) {[m
+[31m-    const type = startDate.toLocaleDateString('id', {[m
+[31m-      year: 'numeric',[m
+[31m-    })[m
+[31m-[m
+[31m-    object[type] = 0[m
+[31m-    startDate.setFullYear(startDate.getFullYear() + 1)[m
+[31m-  }[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-function initMonthlyObject(inputYear: number) {[m
+[31m-  const object: { [key: string]: number } = {}[m
+[31m-  const startDate = new Date(inputYear, 0, 1)[m
+[31m-  const endDate = new Date(startDate)[m
+[31m-  endDate.setFullYear(startDate.getFullYear() + 1, -1, 1)[m
+[31m-[m
+[31m-  while (startDate.getTime() <= endDate.getTime()) {[m
+[31m-    const type = startDate.toLocaleDateString('id', {[m
+[31m-      year: 'numeric',[m
+[31m-      month: 'long',[m
+[31m-    })[m
+[31m-[m
+[31m-    object[type] = 0[m
+[31m-    startDate.setMonth(startDate.getMonth() + 1)[m
+[31m-  }[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-function initDailyObject(inputYear: number, inputMonth: number) {[m
+[31m-  const object: { [key: string]: number } = {}[m
+[31m-  const startDate = new Date(inputYear, inputMonth, 1)[m
+[31m-  const endDate = new Date(startDate)[m
+[31m-  endDate.setMonth(startDate.getMonth() + 1, 0)[m
+[31m-[m
+[31m-  while (startDate.getTime() <= endDate.getTime()) {[m
+[31m-    const type = startDate.toLocaleDateString('id', {[m
+[31m-      dateStyle: 'full',[m
+[31m-    })[m
+[31m-[m
+[31m-    object[type] = 0[m
+[31m-    startDate.setDate(startDate.getDate() + 1)[m
+[31m-  }[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-//~1~PENDAPATAN[m
+[31m-function getYearlyPendapatans(pendapatans: Pendapatan[]) {[m
+[31m-  const object = initYearlyObject()[m
+[31m-[m
+[31m-  pendapatans.forEach((pendapatan) => {[m
+[31m-    const pendapatanDate = new Date(pendapatan.tanggal_bongkar)[m
+[31m-    const type = pendapatanDate.toLocaleDateString('id', {[m
+[31m-      year: 'numeric',[m
+[31m-    })[m
+[31m-[m
+[31m-    if (object[type] !== undefined) {[m
+[31m-      object[type] += Math.round(pendapatan.pendapatan_bruto)[m
+[31m-    }[m
+[31m-  })[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-function getMonthlyPendapatans(pendapatans: Pendapatan[], inputYear: number) {[m
+[31m-  if (inputYear) {[m
+[31m-    const object = initMonthlyObject(inputYear)[m
+[31m-[m
+[31m-    pendapatans.forEach((pendapatan) => {[m
+[31m-      const pendapatanDate = new Date(pendapatan.tanggal_bongkar)[m
+[31m-      const type = pendapatanDate.toLocaleDateString('id', {[m
+[31m-        year: 'numeric',[m
+[31m-        month: 'long',[m
+[31m-      })[m
+[31m-[m
+[31m-      if (object[type] !== undefined) {[m
+[31m-        object[type] += Math.round(pendapatan.pendapatan_bruto)[m
+[31m-      }[m
+[31m-    })[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getDailyPendapatans(pendapatans: Pendapatan[], inputYear: number, inputMonth: number) {[m
+[31m-  if (inputYear && inputMonth !== null) {[m
+[31m-    const object = initDailyObject(inputYear, inputMonth)[m
+[31m-[m
+[31m-    pendapatans.forEach((pendapatan) => {[m
+[31m-      const pendapatanDate = new Date(pendapatan.tanggal_bongkar)[m
+[31m-      const type = pendapatanDate.toLocaleDateString('id', {[m
+[31m-        dateStyle: 'full',[m
+[31m-      })[m
+[31m-[m
+[31m-      if (object[type] !== undefined) {[m
+[31m-        object[type] += Math.round(pendapatan.pendapatan_bruto)[m
+[31m-      }[m
+[31m-    })[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getSumYearlyPendapatans(pendapatans: Pendapatan[]): number {[m
+[31m-  const values = Object.values(getYearlyPendapatans(pendapatans))[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumMonthlyPendapatans(pendapatans: Pendapatan[], inputYear: number): number {[m
+[31m-  const values = Object.values(getMonthlyPendapatans(pendapatans, inputYear) || [0])[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumDailyPendapatans([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number,[m
+[31m-): number {[m
+[31m-  const values = Object.values(getDailyPendapatans(pendapatans, inputYear, inputMonth) || [0])[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-//~1~PENGELUARAN[m
+[31m-function getYearlyPengeluarans(pengeluarans: Pengeluaran[]) {[m
+[31m-  const object = initYearlyObject()[m
+[31m-[m
+[31m-  pengeluarans.forEach((pengeluaran) => {[m
+[31m-    const pengeluaranDate = new Date(pengeluaran.tanggal)[m
+[31m-    const type = pengeluaranDate.toLocaleDateString('id', {[m
+[31m-      year: 'numeric',[m
+[31m-    })[m
+[31m-[m
+[31m-    if (object[type] !== undefined) {[m
+[31m-      object[type] += Math.round(pengeluaran.biaya)[m
+[31m-    }[m
+[31m-  })[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-function getMonthlyPengeluarans(pengeluarans: Pengeluaran[], inputYear: number) {[m
+[31m-  if (inputYear) {[m
+[31m-    const object = initMonthlyObject(inputYear)[m
+[31m-[m
+[31m-    pengeluarans.forEach((pengeluaran) => {[m
+[31m-      const pengeluaranDate = new Date(pengeluaran.tanggal)[m
+[31m-      const type = pengeluaranDate.toLocaleDateString('id', {[m
+[31m-        year: 'numeric',[m
+[31m-        month: 'long',[m
+[31m-      })[m
+[31m-[m
+[31m-      if (object[type] !== undefined) {[m
+[31m-        object[type] += Math.round(pengeluaran.biaya)[m
+[31m-      }[m
+[31m-    })[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getDailyPengeluarans(pengeluarans: Pengeluaran[], inputYear: number, inputMonth: number) {[m
+[31m-  if (inputYear && inputMonth !== null) {[m
+[31m-    const object = initDailyObject(inputYear, inputMonth)[m
+[31m-[m
+[31m-    pengeluarans.forEach((pengeluaran) => {[m
+[31m-      const pengeluaranDate = new Date(pengeluaran.tanggal)[m
+[31m-      const type = pengeluaranDate.toLocaleDateString('id', {[m
+[31m-        dateStyle: 'full',[m
+[31m-      })[m
+[31m-[m
+[31m-      if (object[type] !== undefined) {[m
+[31m-        object[type] += Math.round(pengeluaran.biaya)[m
+[31m-      }[m
+[31m-    })[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getSumYearlyPengeluarans(pengeluarans: Pengeluaran[]): number {[m
+[31m-  const values = Object.values(getYearlyPengeluarans(pengeluarans))[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumMonthlyPengeluarans(pengeluarans: Pengeluaran[], inputYear: number): number {[m
+[31m-  const values = Object.values(getMonthlyPengeluarans(pengeluarans, inputYear) || [0])[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumDailyPengeluarans([m
+[31m-  pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number,[m
+[31m-): number {[m
+[31m-  const values = Object.values(getDailyPengeluarans(pengeluarans, inputYear, inputMonth) || [0])[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-//~1~KEUNTUNGAN[m
+[31m-function getYearlyKeuntungans(pendapatans: Pendapatan[], pengeluarans: Pengeluaran[]) {[m
+[31m-  const yearlyPendapatans = getYearlyPendapatans(pendapatans)[m
+[31m-  const yearlyPengeluarans = getYearlyPengeluarans(pengeluarans)[m
+[31m-[m
+[31m-  const object: { [key: string]: number } = {}[m
+[31m-[m
+[31m-  for (const year in yearlyPendapatans) {[m
+[31m-    if (yearlyPengeluarans.hasOwnProperty(year)) {[m
+[31m-      object[year] = yearlyPendapatans[year] - yearlyPengeluarans[year][m
+[31m-    }[m
+[31m-  }[m
+[31m-[m
+[31m-  return object[m
+[31m-}[m
+[31m-[m
+[31m-function getMonthlyKeuntungans([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number,[m
+[31m-) {[m
+[31m-  const monthlyPendapatans = getMonthlyPendapatans(pendapatans, inputYear)[m
+[31m-  const monthlyPengeluarans = getMonthlyPengeluarans(pengeluarans, inputYear)[m
+[31m-[m
+[31m-  if (monthlyPendapatans && monthlyPengeluarans) {[m
+[31m-    const object: { [key: string]: number } = {}[m
+[31m-[m
+[31m-    for (const month in monthlyPendapatans) {[m
+[31m-      if (monthlyPengeluarans.hasOwnProperty(month)) {[m
+[31m-        object[month] = monthlyPendapatans[month] - monthlyPengeluarans[month][m
+[31m-      }[m
+[31m-    }[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getDailyKeuntungans([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number,[m
+[31m-) {[m
+[31m-  const dailyPendapatans = getDailyPendapatans(pendapatans, inputYear, inputMonth)[m
+[31m-  const dailyPengeluarans = getDailyPengeluarans(pengeluarans, inputYear, inputMonth)[m
+[31m-[m
+[31m-  if (dailyPendapatans && dailyPengeluarans) {[m
+[31m-    const object: { [key: string]: number } = {}[m
+[31m-[m
+[31m-    for (const daily in dailyPendapatans) {[m
+[31m-      if (dailyPengeluarans.hasOwnProperty(daily)) {[m
+[31m-        object[daily] = dailyPendapatans[daily] - dailyPengeluarans[daily][m
+[31m-      }[m
+[31m-    }[m
+[31m-[m
+[31m-    return object[m
+[31m-  }[m
+[31m-[m
+[31m-  return null[m
+[31m-}[m
+[31m-[m
+[31m-function getSumYearlyKeuntungans(pendapatans: Pendapatan[], pengeluarans: Pengeluaran[]): number {[m
+[31m-  const values = Object.values(getYearlyKeuntungans(pendapatans, pengeluarans))[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumMonthlyKeuntungans([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number,[m
+[31m-): number {[m
+[31m-  const values = Object.values(getMonthlyKeuntungans(pendapatans, pengeluarans, inputYear) || [0])[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getSumDailyKeuntungans([m
+[31m-  pendapatans: Pendapatan[],[m
+[31m-  pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number,[m
+[31m-  inputMonth: number,[m
+[31m-): number {[m
+[31m-  const values = Object.values([m
+[31m-    getDailyKeuntungans(pendapatans, pengeluarans, inputYear, inputMonth) || [0],[m
+[31m-  )[m
+[31m-  return values.reduce((accumulator, value) => accumulator + value, 0)[m
+[31m-}[m
+[31m-[m
+[31m-function getOptions(title: string, subtitle: string, data: number[], categories: any): ApexOptions {[m
+[31m-  return {[m
+[31m-    chart: {[m
+[31m-      id: title.replace(/ /g, '-'),[m
+[31m-      group: 'sparklines',[m
+[31m-      type: 'area',[m
+[31m-      width: '100%',[m
+[31m-      height: '240px',[m
+[31m-      sparkline: {[m
+[31m-        enabled: true,[m
+[31m-      },[m
+[31m-    },[m
+[31m-    title: {[m
+[31m-      text: title,[m
+[31m-      offsetX: 30,[m
+[31m-      style: {[m
+[31m-        fontSize: '24px',[m
+[31m-      },[m
+[31m-    },[m
+[31m-    subtitle: {[m
+[31m-      text: subtitle,[m
+[31m-      offsetX: 30,[m
+[31m-      style: {[m
+[31m-        fontSize: '16px',[m
+[31m-      },[m
+[31m-    },[m
+[31m-    series: [[m
+[31m-      {[m
+[31m-        name: title,[m
+[31m-        data: data,[m
+[31m-      },[m
+[31m-    ],[m
+[31m-    xaxis: {[m
+[31m-      categories: categories,[m
+[31m-    },[m
+[31m-    tooltip: {[m
+[31m-      enabled: true,[m
+[31m-    },[m
+[31m-    colors: ['#1B5E20'],[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-function getData([m
+[31m-  _pendapatans: Pendapatan[],[m
+[31m-  _pengeluarans: Pengeluaran[],[m
+[31m-  inputYear: number | null,[m
+[31m-  inputMonth: number | null,[m
+[31m-) {[m
+[31m-  let type = RitaseType.Yearly[m
+[31m-  let pendapatans = getYearlyPendapatans(_pendapatans)[m
+[31m-  let sumPendapatan = getSumYearlyPendapatans(_pendapatans)[m
+[31m-  let pengeluarans = getYearlyPengeluarans(_pengeluarans)[m
+[31m-  let sumPengeluaran = getSumYearlyPengeluarans(_pengeluarans)[m
+[31m-  let keuntungans = getYearlyKeuntungans(_pendapatans, _pengeluarans)[m
+[31m-  let sumKeuntungan = getSumYearlyKeuntungans(_pendapatans, _pengeluarans)[m
+[31m-[m
+[31m-  if (inputYear && inputMonth !== null) {[m
+[31m-    type = RitaseType.Daily[m
+[31m-    const dailyPendapatans = getDailyPendapatans(_pendapatans, inputYear, inputMonth)[m
+[31m-    const dailyPengeluarans = getDailyPengeluarans(_pengeluarans, inputYear, inputMonth)[m
+[31m-    const dailyKeuntungans = getDailyKeuntungans(_pendapatans, _pengeluarans, inputYear, inputMonth)[m
+[31m-[m
+[31m-    if (dailyPendapatans) {[m
+[31m-      pendapatans = dailyPendapatans[m
+[31m-      sumPendapatan = getSumDailyPendapatans(_pendapatans, inputYear, inputMonth)[m
+[31m-    }[m
+[31m-[m
+[31m-    if (dailyPengeluarans) {[m
+[31m-      pengeluarans = dailyPengeluarans[m
+[31m-      sumPengeluaran = getSumDailyPengeluarans(_pengeluarans, inputYear, inputMonth)[m
+[31m-    }[m
+[31m-[m
+[31m-    if (dailyKeuntungans) {[m
+[31m-      keuntungans = dailyKeuntungans[m
+[31m-      sumKeuntungan = getSumDailyKeuntungans(_pendapatans, _pengeluarans, inputYear, inputMonth)[m
+[31m-    }[m
+[31m-  } else if (inputYear) {[m
+[31m-    type = RitaseType.Monthly[m
+[31m-    const monthlyPendapatans = getMonthlyPendapatans(_pendapatans, inputYear)[m
+[31m-    const monthlyPengeluarans = getMonthlyPengeluarans(_pengeluarans, inputYear)[m
+[31m-    const monthlyKeuntungans = getMonthlyKeuntungans(_pendapatans, _pengeluarans, inputYear)[m
+[31m-[m
+[31m-    if (monthlyPendapatans) {[m
+[31m-      pendapatans = monthlyPendapatans[m
+[31m-      sumPendapatan = getSumMonthlyPendapatans(_pendapatans, inputYear)[m
+[31m-    }[m
+[31m-[m
+[31m-    if (monthlyPengeluarans) {[m
+[31m-      pengeluarans = monthlyPengeluarans[m
+[31m-      sumPengeluaran = getSumMonthlyPengeluarans(_pengeluarans, inputYear)[m
+[31m-    }[m
+[31m-[m
+[31m-    if (monthlyKeuntungans) {[m
+[31m-      keuntungans = monthlyKeuntungans[m
+[31m-      sumKeuntungan = getSumMonthlyKeuntungans(_pendapatans, _pengeluarans, inputYear)[m
+[31m-    }[m
+[31m-  }[m
+[31m-[m
+[31m-  const pendapatanOptions = getOptions([m
+[31m-    `Pendapatan ${type}`,[m
+[31m-    `Total: ${i18n.global.n(sumPendapatan, 'currency', 'id')}`,[m
+[31m-    Object.values(pendapatans),[m
+[31m-    Object.keys(pendapatans),[m
+[31m-  )[m
+[31m-[m
+[31m-  const pengeluaranOptions = getOptions([m
+[31m-    `Pengeluaran ${type}`,[m
+[31m-    `Total: ${i18n.global.n(sumPengeluaran, 'currency', 'id')}`,[m
+[31m-    Object.values(pengeluarans),[m
+[31m-    Object.keys(pengeluarans),[m
+[31m-  )[m
+[31m-[m
+[31m-  const keuntunganOptions = getOptions([m
+[31m-    `Keuntungan ${type}`,[m
+[31m-    `Total: ${i18n.global.n(sumKeuntungan, 'currency', 'id')}`,[m
+[31m-    Object.values(keuntungans),[m
+[31m-    Object.keys(keuntungans),[m
+[31m-  )[m
+[31m-[m
+[31m-  return { pendapatanOptions, pengeluaranOptions, keuntunganOptions }[m
+[31m-}[m
+[31m-[m
+[31m-self.onmessage = function (event) {[m
+[31m-  const pendapatans: Pendapatan[] = JSON.parse(event.data.pendapatans)[m
+[31m-  const pengeluarans: Pengeluaran[] = JSON.parse(event.data.pengeluarans)[m
+[31m-  const inputYear: number | null = event.data.inputYear[m
+[31m-  const inputMonth: number | null = event.data.inputMonth[m
+[31m-[m
+[31m-  const data = getData(pendapatans, pengeluarans, inputYear, inputMonth)[m
+[31m-[m
+[31m-  self.postMessage({[m
+[31m-    pendapatanOptions: JSON.stringify(data.pendapatanOptions),[m
+[31m-    pengeluaranOptions: JSON.stringify(data.pengeluaranOptions),[m
+[31m-    keuntunganOptions: JSON.stringify(data.keuntunganOptions),[m
+[31m-  })[m
+[31m-}[m
+[1mdiff --git a/vite.config.ts b/vite.config.ts[m
+[1mindex 70796dd..043b1eb 100644[m
+[1m--- a/vite.config.ts[m
+[1m+++ b/vite.config.ts[m
+[36m@@ -17,6 +17,9 @@[m [mexport default defineConfig({[m
+       '@': fileURLToPath(new URL('./src', import.meta.url))[m
+     },[m
+   },[m
+[32m+[m[32m  optimizeDeps: {[m
+[32m+[m[32m    include: ['vue', 'vue-i18n','src'][m
+[32m+[m[32m  },[m[41m  [m
+   build: {[m
+     minify: "esbuild",[m
+     cssMinify: "lightningcss",[m
+[36m@@ -30,16 +33,70 @@[m [mexport default defineConfig({[m
+           reservedNamesAsProps: true,[m
+           symbols: false,[m
+         },[m
+[31m-        manualChunks(id) {[m
+[31m-          if (id.includes("node_modules")) {[m
+[31m-            return id[m
+[31m-              .toString()[m
+[31m-              .split("node_modules/")[1][m
+[31m-              .split("/")[0][m
+[31m-              .toString();[m
+[31m-          }[m
+[31m-        },[m
+[32m+[m[32m        manualChunks : undefined,[m
+       },[m
+     },[m
+   },[m
+[32m+[m[32m  worker: {[m
+[32m+[m[32m    format: 'es',[m
+[32m+[m[32m  },[m
+ })[m
+[32m+[m[32m// export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {[m
+[32m+[m[32m//   const baseConfig = {[m
+[32m+[m[32m//     plugins: [[m
+[32m+[m[32m//       vue(),[m
+[32m+[m[32m//       vueDevTools(),[m
+[32m+[m[32m//       vuetify()[m
+[32m+[m[32m//     ],[m
+[32m+[m[32m//     resolve: {[m
+[32m+[m[32m//       alias: {[m
+[32m+[m[32m//         '@': fileURLToPath(new URL('./src', import.meta.url))[m
+[32m+[m[32m//       },[m
+[32m+[m[32m//     },[m
+[32m+[m[32m//     optimizeDeps: {[m
+[32m+[m[32m//       include: ['vue', 'vue-i18n'][m
+[32m+[m[32m//     },[m[41m [m
+[32m+[m[32m//     build: {[m
+[32m+[m[32m//       minify: "esbuild",[m
+[32m+[m[32m//       cssMinify: "lightningcss",[m
+[32m+[m[32m//       rollupOptions: {[m
+[32m+[m[32m//         output: {[m
+[32m+[m[32m//           generatedCode: {[m
+[32m+[m[32m//             preset: "es2015",[m
+[32m+[m[32m//             arrowFunctions: true,[m
+[32m+[m[32m//             constBindings: true,[m
+[32m+[m[32m//             objectShorthand: true,[m
+[32m+[m[32m//             reservedNamesAsProps: true,[m
+[32m+[m[32m//             symbols: false,[m
+[32m+[m[32m//           },[m
+[32m+[m[32m//           manualChunks(id) {[m
+[32m+[m[32m//             if (id.includes("node_modules")) {[m
+[32m+[m[32m//               return id[m
+[32m+[m[32m//                 .toString()[m
+[32m+[m[32m//                 .split("node_modules/")[1][m
+[32m+[m[32m//                 .split("/")[0][m
+[32m+[m[32m//                 .toString();[m
+[32m+[m[32m//             }[m
+[32m+[m[32m//           },[m
+[32m+[m[32m//         },[m
+[32m+[m[32m//       },[m
+[32m+[m[32m//     },[m
+[32m+[m[32m//   };[m
+[32m+[m[32m//   if (command === "serve") {[m
+[32m+[m[32m//     return {[m
+[32m+[m[32m//       ...baseConfig,[m
+[32m+[m[32m//       define: {[m
+[32m+[m[32m//         __BACK_WS_URI__: "ws://localhost:8080/ws",[m
+[32m+[m[32m//         __BACK_HTTP_SPA__: "http://localhost:8080/spa",[m
+[32m+[m[32m//       },[m
+[32m+[m[32m//     };[m
+[32m+[m[32m//   } else {[m
+[32m+[m[32m//     return {[m
+[32m+[m[32m//       ...baseConfig,[m
+[32m+[m[32m//       define: {[m
+[32m+[m[32m//         __BACK_WS_URI__: "'ws://localhost:8080/ws'",[m
+[32m+[m[32m//         __BACK_HTTP_SPA__: "'http://localhost:8080/spa'",[m
+[32m+[m[32m//       },[m
+[32m+[m[32m//     };[m
+[32m+[m[32m//   }[m
+[32m+[m[32m// });[m
