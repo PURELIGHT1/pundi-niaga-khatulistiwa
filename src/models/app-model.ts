@@ -17,7 +17,6 @@ import SparePartView from '@/views/SparePartView.vue'
 // import PKSView from "@/views/PKSView.vue";
 import PendapatanView from '@/views/PendapatanView.vue'
 import PengeluaranView from '@/views/PengeluaranView.vue'
-import RitaseView from '@/views/RitaseView.vue'
 import MasukView from '@/views/MasukView.vue'
 import { useNotifikasiStore } from '@/stores/notifikasi-store'
 import { useUserStore } from '@/stores/user-store'
@@ -154,14 +153,6 @@ export const ROUTES = [
     iconActive: '$cash-sync',
     iconPassive: '$cash-minus',
     component: PengeluaranView,
-    role: [UserJenis.Pemilik, UserJenis.Admin],
-  },
-  {
-    path: '/ritase',
-    name: 'Ritase',
-    iconActive: '$clipboard-text',
-    iconPassive: '$clipboard-text-outline',
-    component: RitaseView,
     role: [UserJenis.Pemilik, UserJenis.Admin],
   },
   {

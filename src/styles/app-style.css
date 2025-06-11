@@ -1,4 +1,4 @@
-@import url("./transition-style.css");
+@import url('./transition-style.css');
 
 :root {
   --transition-duration: 1120ms;
