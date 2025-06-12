@@ -1,7 +1,11 @@
 import i18n from '@/plugins/i18n'
 import { MIN_YEAR } from '@/models/app-model'
 import { randomNumber } from '@/utils/util'
-import { type FormattedPengeluaran, type Pengeluaran, PengeluaranType } from '@/models/pengeluaran-model'
+import {
+  type FormattedPengeluaran,
+  type Pengeluaran,
+  PengeluaranType,
+} from '@/models/pengeluaran-model'
 import { useMobilStore } from '../mobil-store'
 
 export function getFormattedPengeluarans(pengeluarans: Pengeluaran[]): FormattedPengeluaran[] {

@@ -22,7 +22,7 @@ import { useNotifikasiStore } from '@/stores/notifikasi-store'
 import { useUserStore } from '@/stores/user-store'
 import { getAkunItems, type TopBar } from './top-bar-model'
 import UbahPasswordView from '@/views/UbahPasswordView.vue'
-import { UserJenis } from './user-model';
+import { UserJenis } from './user-model'
 
 export const TRANSITION_DURATION = 1120
 export const WORKER_ERROR_MESSAGE = 'Web Workers are not supported in this browser.'

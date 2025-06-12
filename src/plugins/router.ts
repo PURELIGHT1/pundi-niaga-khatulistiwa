@@ -1,6 +1,4 @@
- 
-
-import { createRouter, createWebHistory, type RouteRecordRaw  } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import AppView from '@/views/AppView.vue'
 import { useAppStore } from '@/stores/app-store'
 import { useUserStore } from '@/stores/user-store'

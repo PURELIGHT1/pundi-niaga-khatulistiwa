@@ -39,7 +39,7 @@ export interface UserForm {
   }
 }
 
-export enum UserJenis  {
+export enum UserJenis {
   Pemilik = 'Pemilik',
   Admin = 'Admin',
   Bengkel = 'Bengkel',

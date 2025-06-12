@@ -33,7 +33,7 @@ export async function copyToClipboard(text: string): Promise<void> {
     await navigator.clipboard.writeText(text)
   } catch (error) {
     if (import.meta.env.VITE_ENVIRONMENT === 'development') {
-      console.error(error);
+      console.error(error)
     }
   }
 }
