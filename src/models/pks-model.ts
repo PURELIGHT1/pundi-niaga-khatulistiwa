@@ -12,6 +12,10 @@ export interface FormattedPKS {
 }
 
 export interface PKSForm {
+  id: {
+    value: number | null
+    error: string
+  },
   nama: {
     value: string
     error: string

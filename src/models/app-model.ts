@@ -23,6 +23,7 @@ import { useUserStore } from '@/stores/user-store'
 import { getAkunItems, type TopBar } from './top-bar-model'
 import UbahPasswordView from '@/views/UbahPasswordView.vue'
 import { UserJenis } from './user-model'
+import PKSView from '@/views/PKSView.vue'
 
 export const TRANSITION_DURATION = 1120
 export const WORKER_ERROR_MESSAGE = 'Web Workers are not supported in this browser.'
@@ -93,7 +94,7 @@ export const ROUTES = [
   },
   {
     path: '/admin',
-    name: 'Admin',
+    name: 'Data Admin',
     iconActive: '$account',
     iconPassive: '$account-outline',
     component: AdminView,
@@ -101,7 +102,7 @@ export const ROUTES = [
   },
   {
     path: '/bengkel',
-    name: 'Bengkel',
+    name: 'Data Bengkel',
     iconActive: '$tools',
     iconPassive: '$hammer-wrench',
     component: BengkelView,
@@ -109,7 +110,7 @@ export const ROUTES = [
   },
   {
     path: '/sopir',
-    name: 'Sopir',
+    name: 'Data Sopir',
     iconActive: '$ship-wheel',
     iconPassive: '$steering',
     component: SopirView,
@@ -117,7 +118,7 @@ export const ROUTES = [
   },
   {
     path: '/mobil',
-    name: 'Mobil',
+    name: 'Data Mobil',
     iconActive: '$car',
     iconPassive: '$car-outline',
     component: MobilView,
@@ -125,20 +126,20 @@ export const ROUTES = [
   },
   {
     path: '/spare-part',
-    name: 'SparePart',
+    name: 'Spare Part',
     iconActive: '$car-cog',
     iconPassive: '$car-battery',
     component: SparePartView,
     role: [UserJenis.Pemilik, UserJenis.Bengkel],
   },
-  // {
-  //   path: "/pks",
-  //   name: "PKS",
-  //   iconActive: "$oil-fill",
-  //   iconPassive: "$oil",
-  //   component: PKSView,
-  //   role: [UserJenis.Pemilik, UserJenis.Admin],
-  // },
+  {
+    path: "/pks",
+    name: "PKS",
+    iconActive: "$oil-fill",
+    iconPassive: "$oil",
+    component: PKSView,
+    role: [UserJenis.Pemilik, UserJenis.Admin],
+  },
   {
     path: '/pendapatan',
     name: 'Pendapatan',

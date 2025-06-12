@@ -5,7 +5,7 @@ import type { PKSForm } from '@/models/pks-model'
 export async function checkPKSValidation(action: string, form: PKSForm): Promise<boolean> {
   const appStore = useAppStore()
   const [nama, status] = await Promise.all([
-    namaValidation(form.nama.value),
+    action !== 'update' ? namaValidation(form.nama.value, null) : namaValidation(form.nama.value, form.id.value),
     action === 'update' ? statusValidation(form.is_active.value ?? null) : { error: '' },
   ])
 
