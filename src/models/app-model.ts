@@ -24,6 +24,7 @@ import { getAkunItems, type TopBar } from './top-bar-model'
 import UbahPasswordView from '@/views/UbahPasswordView.vue'
 import { UserJenis } from './user-model'
 import PKSView from '@/views/PKSView.vue'
+import RitaseView from '@/views/RitaseView.vue'
 
 export const TRANSITION_DURATION = 1120
 export const WORKER_ERROR_MESSAGE = 'Web Workers are not supported in this browser.'
@@ -154,6 +155,14 @@ export const ROUTES = [
     iconActive: '$cash-sync',
     iconPassive: '$cash-minus',
     component: PengeluaranView,
+    role: [UserJenis.Pemilik, UserJenis.Admin],
+  },
+  {
+    path: '/ritase',
+    name: 'Laporan Ritase',
+    iconActive: '$clipboard-text', 
+    iconPassive: '$clipboard-text-outline',
+    component: RitaseView,
     role: [UserJenis.Pemilik, UserJenis.Admin],
   },
   {
